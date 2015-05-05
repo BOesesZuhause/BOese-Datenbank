@@ -813,8 +813,7 @@
 		<commentypos>21</commentypos>
 		<commentwidth>135</commentwidth>
 		<commentheight>85</commentheight>
-		<commenttext>Zusammenfassung mehrerer Räume unter einem Namen
-z.B. Etage</commenttext>
+		<commenttext>Zusammenfassung mehrerer Räume unter einem Namen z.B. Etage</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
 			<name>SansSerif.bold</name>
@@ -868,12 +867,9 @@ z.B. Etage</commenttext>
 	<comment>
 		<commentxpos>488</commentxpos>
 		<commentypos>374</commentypos>
-		<commentwidth>165</commentwidth>
-		<commentheight>84</commentheight>
-		<commenttext>Typ=1: Sensor
-Typ=2: Aktor
-Typ=3: Verbraucher
-hier nicht modellierbar</commenttext>
+		<commentwidth>296</commentwidth>
+		<commentheight>52</commentheight>
+		<commenttext>Typ=1: Sensor Typ=2: Aktor Typ=3: Verbraucher hier nicht modellierbar</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
 			<name>SansSerif.bold</name>
@@ -887,11 +883,7 @@ hier nicht modellierbar</commenttext>
 		<commentypos>0</commentypos>
 		<commentwidth>328</commentwidth>
 		<commentheight>332</commentheight>
-		<commenttext>Schaltung fehlt noch. In den anderen Modellen konnte immer nur an aus geschaltet werden. Was ist mit spezielleren Sachen wie z.B. spiele ein bestimmtes Lied ab?
-Die Tabelle dafür hab ich deshalb erstmal weggelassen. Die Logtabelle hängt natürlich auch davon ab und fehlt ebenfalls noch. 
-Ich hab das jetzt erstmal hochgeladen, weil ich jetzt los muss. Ich überleg nachher noch weiter.
-
-Angelehnt ist es etwas an das Apple-Konzept. Ist im Wiki unter dem Punkt Datenbank beschrieben.</commenttext>
+		<commenttext>Schaltung fehlt noch. In den anderen Modellen konnte immer nur an aus geschaltet werden. Was ist mit spezielleren Sachen wie z.B. spiele ein bestimmtes Lied ab? Die Tabelle dafür hab ich deshalb erstmal weggelassen. Die Logtabelle hängt natürlich auch davon ab und fehlt ebenfalls noch.  Ich hab das jetzt erstmal hochgeladen, weil ich jetzt los muss. Ich überleg nachher noch weiter. Angelehnt ist es etwas an das Apple-Konzept. Ist im Wiki unter dem Punkt Datenbank beschrieben.</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
 			<name>SansSerif.bold</name>
