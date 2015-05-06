@@ -1060,10 +1060,10 @@
 		<commentypos>16</commentypos>
 		<commentwidth>148</commentwidth>
 		<commentheight>108</commentheight>
-		<commenttext>Zusammenfassung mehrerer Räume unter einem Namen z.B. Etage</commenttext>
+		<commenttext>Zusammenfassung mehrerer Räume unter einem Namen z.B. Etage^s	Kann ein Raum in mehrern Zonen sein? Daher 1:N oder doch N:M?^b</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>SansSerif.bold</name>
+			<name>Dialog</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
@@ -1074,10 +1074,10 @@
 		<commentypos>548</commentypos>
 		<commentwidth>148</commentwidth>
 		<commentheight>94</commentheight>
-		<commenttext>Rechteverwaltung pro Raum, pro Gerät oder beides?</commenttext>
+		<commenttext>Rechteverwaltung pro Raum, pro Gerät oder beides?^s	Soll es Rechte-Gruppen geben^b</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>SansSerif.bold</name>
+			<name>Dialog</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
@@ -1088,10 +1088,10 @@
 		<commentypos>0</commentypos>
 		<commentwidth>329</commentwidth>
 		<commentheight>333</commentheight>
-		<commenttext>Regeln werden in Konfigurationsdateien ausgelagert (z.B. JSON, XML ... ). </commenttext>
+		<commenttext>Regeln werden in Konfigurationsdateien ausgelagert (z.B. JSON, XML ... ). ^s</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>SansSerif.bold</name>
+			<name>Dialog</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
@@ -1101,11 +1101,11 @@
 		<commentxpos>743</commentxpos>
 		<commentypos>720</commentypos>
 		<commentwidth>216</commentwidth>
-		<commentheight>118</commentheight>
-		<commenttext>Sensor ist ein allgemeiner Sensor und kann mehrfach verwendet werden. z.B. 5 Rauchmelder, selber Hersteller</commenttext>
+		<commentheight>185</commentheight>
+		<commenttext>Sensor ist ein allgemeiner Sensor und kann mehrfach verwendet werden. z.B. 5 Rauchmelder, selber Hersteller^s		So sind nicht mehrer Sensoren des gleichen Typ's in einem Gerät möglich(Wetterstation mit Innen und Aussentemperatur^b</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>SansSerif.bold</name>
+			<name>Dialog</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
@@ -1116,10 +1116,10 @@
 		<commentypos>360</commentypos>
 		<commentwidth>154</commentwidth>
 		<commentheight>109</commentheight>
-		<commenttext>Ein Gerät kann mehrere Verbraucher, Sensoren und Aktoren haben</commenttext>
+		<commenttext>Ein Gerät kann mehrere Verbraucher, Sensoren und Aktoren haben^s</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>SansSerif.bold</name>
+			<name>Dialog</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
