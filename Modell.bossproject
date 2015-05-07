@@ -368,7 +368,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Nutzer</tablename>
+		<tablename>Gruppe</tablename>
 		<tablexpos>1143</tablexpos>
 		<tableypos>685</tableypos>
 		<tablewidth>110</tablewidth>
@@ -389,54 +389,6 @@
 			</column>
 			<column>
 				<columnname>Name</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-			<column>
-				<columnname>Vorname</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-			<column>
-				<columnname>Passwort</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-			<column>
-				<columnname>Geburtsdatum</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-			<column>
-				<columnname>Geschlecht</columnname>
 				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -475,7 +427,7 @@
 				<columnname>ID_Nutzer</columnname>
 				<columntype>integer</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Nutzer</columnreftablename>
+				<columnreftablename>Gruppe</columnreftablename>
 				<columnrefcolumnname>ID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
@@ -489,9 +441,9 @@
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
+				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
-				<columnpk>false</columnpk>
+				<columnpk>true</columnpk>
 				<columnfk>false</columnfk>
 				<columnunique>false</columnunique>
 			</column>
@@ -502,6 +454,7 @@
 				<combiColumns>
 					<combiColumn>ID_Gerät</combiColumn>
 					<combiColumn>ID_Nutzer</combiColumn>
+					<combiColumn>Rechte</combiColumn>
 				</combiColumns>
 			</uniqueCombination>
 		</uniqueCombinations>
@@ -530,7 +483,7 @@
 				<columnname>ID_Nutzer</columnname>
 				<columntype>integer</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Nutzer</columnreftablename>
+				<columnreftablename>Gruppe</columnreftablename>
 				<columnrefcolumnname>ID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
@@ -544,9 +497,9 @@
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
+				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
-				<columnpk>false</columnpk>
+				<columnpk>true</columnpk>
 				<columnfk>false</columnfk>
 				<columnunique>false</columnunique>
 			</column>
@@ -557,6 +510,7 @@
 				<combiColumns>
 					<combiColumn>ID_Raum</combiColumn>
 					<combiColumn>ID_Nutzer</combiColumn>
+					<combiColumn>Rechte</combiColumn>
 				</combiColumns>
 			</uniqueCombination>
 		</uniqueCombinations>
@@ -889,6 +843,145 @@
 			</uniqueCombination>
 		</uniqueCombinations>
 	</table>
+	<table>
+		<tablename>Nutzer</tablename>
+		<tablexpos>1498</tablexpos>
+		<tableypos>801</tableypos>
+		<tablewidth>170</tablewidth>
+		<tableheight>200</tableheight>
+		<weak>false</weak>
+		<columns>
+			<column>
+				<columnname>ID</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>true</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>true</columnunique>
+			</column>
+			<column>
+				<columnname>Name</columnname>
+				<columntype>varchar(25)</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>Vorname</columnname>
+				<columntype>varchar(25)</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>Passwort</columnname>
+				<columntype>varchar(25)</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>Geschlecht</columnname>
+				<columntype>boolean</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>Geburtsdatum</columnname>
+				<columntype>date</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+		</columns>
+		<uniqueCombinations>
+		</uniqueCombinations>
+	</table>
+	<table>
+		<tablename>Gruppe_Nutzer</tablename>
+		<tablexpos>1280</tablexpos>
+		<tableypos>806</tableypos>
+		<tablewidth>170</tablewidth>
+		<tableheight>200</tableheight>
+		<weak>true</weak>
+		<columns>
+			<column>
+				<columnname>ID_Gruppe</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>Gruppe</columnreftablename>
+				<columnrefcolumnname>ID</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>true</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>ID_Nutzer</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>Nutzer</columnreftablename>
+				<columnrefcolumnname>ID</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>true</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>position</columnname>
+				<columntype>date</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+		</columns>
+		<uniqueCombinations>
+			<uniqueCombination>
+				<shortForm>null</shortForm>
+				<combiColumns>
+					<combiColumn>ID_Gruppe</combiColumn>
+					<combiColumn>ID_Nutzer</combiColumn>
+				</combiColumns>
+			</uniqueCombination>
+		</uniqueCombinations>
+	</table>
 </tables>
 <relations>
 	<relation>
@@ -937,13 +1030,13 @@
 		<relationstrong>Gerät</relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Nutzer</relationtablea>
+		<relationtablea>Gruppe</relationtablea>
 		<relationtableb>Gerät_Nutzer</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
 		<relationcardb>0</relationcardb>
-		<relationstrong>Nutzer</relationstrong>
+		<relationstrong>Gruppe</relationstrong>
 	</relation>
 	<relation>
 		<relationtablea>Raum</relationtablea>
@@ -955,13 +1048,13 @@
 		<relationstrong>Raum</relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Nutzer</relationtablea>
+		<relationtablea>Gruppe</relationtablea>
 		<relationtableb>Raum_Nutzer</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
 		<relationcardb>0</relationcardb>
-		<relationstrong>Nutzer</relationstrong>
+		<relationstrong>Gruppe</relationstrong>
 	</relation>
 	<relation>
 		<relationtablea>Service</relationtablea>
@@ -1053,17 +1146,35 @@
 		<relationcardb>0</relationcardb>
 		<relationstrong>Gerät</relationstrong>
 	</relation>
+	<relation>
+		<relationtablea>Gruppe</relationtablea>
+		<relationtableb>Gruppe_Nutzer</relationtableb>
+		<relationtypea>0</relationtypea>
+		<relationtypeb>1</relationtypeb>
+		<relationcarda>1</relationcarda>
+		<relationcardb>0</relationcardb>
+		<relationstrong>Gruppe</relationstrong>
+	</relation>
+	<relation>
+		<relationtablea>Nutzer</relationtablea>
+		<relationtableb>Gruppe_Nutzer</relationtableb>
+		<relationtypea>0</relationtypea>
+		<relationtypeb>1</relationtypeb>
+		<relationcarda>1</relationcarda>
+		<relationcardb>0</relationcardb>
+		<relationstrong>Nutzer</relationstrong>
+	</relation>
 </relations>
 <comments>
 	<comment>
 		<commentxpos>1023</commentxpos>
 		<commentypos>16</commentypos>
-		<commentwidth>148</commentwidth>
-		<commentheight>108</commentheight>
+		<commentwidth>176</commentwidth>
+		<commentheight>157</commentheight>
 		<commenttext>Zusammenfassung mehrerer Räume unter einem Namen z.B. Etage^s	Kann ein Raum in mehrern Zonen sein? Daher 1:N oder doch N:M?^b</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>Dialog</name>
+			<name>Dialog.bold</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
@@ -1072,12 +1183,12 @@
 	<comment>
 		<commentxpos>1135</commentxpos>
 		<commentypos>548</commentypos>
-		<commentwidth>148</commentwidth>
-		<commentheight>94</commentheight>
+		<commentwidth>166</commentwidth>
+		<commentheight>128</commentheight>
 		<commenttext>Rechteverwaltung pro Raum, pro Gerät oder beides?^s	Soll es Rechte-Gruppen geben^b</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>Dialog</name>
+			<name>Dialog.bold</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
@@ -1091,7 +1202,7 @@
 		<commenttext>Regeln werden in Konfigurationsdateien ausgelagert (z.B. JSON, XML ... ). ^s</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>Dialog</name>
+			<name>Dialog.bold</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
@@ -1101,11 +1212,11 @@
 		<commentxpos>743</commentxpos>
 		<commentypos>720</commentypos>
 		<commentwidth>216</commentwidth>
-		<commentheight>185</commentheight>
+		<commentheight>217</commentheight>
 		<commenttext>Sensor ist ein allgemeiner Sensor und kann mehrfach verwendet werden. z.B. 5 Rauchmelder, selber Hersteller^s		So sind nicht mehrer Sensoren des gleichen Typ's in einem Gerät möglich(Wetterstation mit Innen und Aussentemperatur^b</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>Dialog</name>
+			<name>Dialog.bold</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
@@ -1119,7 +1230,7 @@
 		<commenttext>Ein Gerät kann mehrere Verbraucher, Sensoren und Aktoren haben^s</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>Dialog</name>
+			<name>Dialog.bold</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
