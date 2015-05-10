@@ -5,7 +5,7 @@
 		<tablexpos>845</tablexpos>
 		<tableypos>260</tableypos>
 		<tablewidth>110</tablewidth>
-		<tableheight>138</tableheight>
+		<tableheight>150</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -404,7 +404,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Gerät_Nutzer</tablename>
+		<tablename>Gerät_Gruppe</tablename>
 		<tablexpos>930</tablexpos>
 		<tableypos>533</tableypos>
 		<tablewidth>155</tablewidth>
@@ -460,7 +460,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Raum_Nutzer</tablename>
+		<tablename>Raum_Gruppe</tablename>
 		<tablexpos>1326</tablexpos>
 		<tableypos>529</tableypos>
 		<tablewidth>155</tablewidth>
@@ -520,7 +520,7 @@
 		<tablexpos>400</tablexpos>
 		<tableypos>514</tableypos>
 		<tablewidth>64</tablewidth>
-		<tableheight>61</tableheight>
+		<tableheight>74</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -589,10 +589,10 @@
 	</table>
 	<table>
 		<tablename>Messung</tablename>
-		<tablexpos>631</tablexpos>
-		<tableypos>758</tableypos>
+		<tablexpos>635</tablexpos>
+		<tableypos>794</tableypos>
 		<tablewidth>94</tablewidth>
-		<tableheight>143</tableheight>
+		<tableheight>155</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -845,8 +845,8 @@
 	</table>
 	<table>
 		<tablename>Nutzer</tablename>
-		<tablexpos>1498</tablexpos>
-		<tableypos>801</tableypos>
+		<tablexpos>1613</tablexpos>
+		<tableypos>741</tableypos>
 		<tablewidth>170</tablewidth>
 		<tableheight>200</tableheight>
 		<weak>false</weak>
@@ -929,10 +929,10 @@
 	</table>
 	<table>
 		<tablename>Gruppe_Nutzer</tablename>
-		<tablexpos>1280</tablexpos>
-		<tableypos>806</tableypos>
-		<tablewidth>170</tablewidth>
-		<tableheight>200</tableheight>
+		<tablexpos>1356</tablexpos>
+		<tableypos>756</tableypos>
+		<tablewidth>171</tablewidth>
+		<tableheight>134</tableheight>
 		<weak>true</weak>
 		<columns>
 			<column>
@@ -1022,7 +1022,7 @@
 	</relation>
 	<relation>
 		<relationtablea>Gerät</relationtablea>
-		<relationtableb>Gerät_Nutzer</relationtableb>
+		<relationtableb>Gerät_Gruppe</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
@@ -1031,7 +1031,7 @@
 	</relation>
 	<relation>
 		<relationtablea>Gruppe</relationtablea>
-		<relationtableb>Gerät_Nutzer</relationtableb>
+		<relationtableb>Gerät_Gruppe</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
@@ -1040,7 +1040,7 @@
 	</relation>
 	<relation>
 		<relationtablea>Raum</relationtablea>
-		<relationtableb>Raum_Nutzer</relationtableb>
+		<relationtableb>Raum_Gruppe</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
@@ -1049,7 +1049,7 @@
 	</relation>
 	<relation>
 		<relationtablea>Gruppe</relationtablea>
-		<relationtableb>Raum_Nutzer</relationtableb>
+		<relationtableb>Raum_Gruppe</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
@@ -1167,25 +1167,11 @@
 </relations>
 <comments>
 	<comment>
-		<commentxpos>1023</commentxpos>
-		<commentypos>16</commentypos>
+		<commentxpos>1056</commentxpos>
+		<commentypos>31</commentypos>
 		<commentwidth>176</commentwidth>
-		<commentheight>157</commentheight>
-		<commenttext>Zusammenfassung mehrerer Räume unter einem Namen z.B. Etage^s	Kann ein Raum in mehrern Zonen sein? Daher 1:N oder doch N:M?^b</commenttext>
-		<commentbackground>-14336</commentbackground>
-		<commentfont>
-			<name>Dialog.bold</name>
-			<style>1</style>
-			<size>13</size>
-		</commentfont>
-		<commentforeground>-16777216</commentforeground>
-	</comment>
-	<comment>
-		<commentxpos>1135</commentxpos>
-		<commentypos>548</commentypos>
-		<commentwidth>166</commentwidth>
-		<commentheight>128</commentheight>
-		<commenttext>Rechteverwaltung pro Raum, pro Gerät oder beides?^s	Soll es Rechte-Gruppen geben^b</commenttext>
+		<commentheight>158</commentheight>
+		<commenttext>Zusammenfassung mehrerer Räume unter einem Namen z.B. Etage</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
 			<name>Dialog.bold</name>
@@ -1199,21 +1185,8 @@
 		<commentypos>0</commentypos>
 		<commentwidth>329</commentwidth>
 		<commentheight>333</commentheight>
-		<commenttext>Regeln werden in Konfigurationsdateien ausgelagert (z.B. JSON, XML ... ). ^s</commenttext>
-		<commentbackground>-14336</commentbackground>
-		<commentfont>
-			<name>Dialog.bold</name>
-			<style>1</style>
-			<size>13</size>
-		</commentfont>
-		<commentforeground>-16777216</commentforeground>
-	</comment>
-	<comment>
-		<commentxpos>743</commentxpos>
-		<commentypos>720</commentypos>
-		<commentwidth>216</commentwidth>
-		<commentheight>217</commentheight>
-		<commenttext>Sensor ist ein allgemeiner Sensor und kann mehrfach verwendet werden. z.B. 5 Rauchmelder, selber Hersteller^s		So sind nicht mehrer Sensoren des gleichen Typ's in einem Gerät möglich(Wetterstation mit Innen und Aussentemperatur^b</commenttext>
+		<commenttext>Regeln werden in Konfigurationsdateien ausgelagert (z.B. JSON, XML ... ).
+Logs und statistikdaten kommen in eine eigene Datenbank</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
 			<name>Dialog.bold</name>
@@ -1227,10 +1200,38 @@
 		<commentypos>360</commentypos>
 		<commentwidth>154</commentwidth>
 		<commentheight>109</commentheight>
-		<commenttext>Ein Gerät kann mehrere Verbraucher, Sensoren und Aktoren haben^s</commenttext>
+		<commenttext>Ein Gerät kann mehrere Verbraucher, Sensoren und Aktoren haben</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
 			<name>Dialog.bold</name>
+			<style>1</style>
+			<size>13</size>
+		</commentfont>
+		<commentforeground>-16777216</commentforeground>
+	</comment>
+	<comment>
+		<commentxpos>443</commentxpos>
+		<commentypos>103</commentypos>
+		<commentwidth>175</commentwidth>
+		<commentheight>73</commentheight>
+		<commenttext>Ein Service ist ein Dienst, den das Gerät anbietet z.B. Licht an/aus</commenttext>
+		<commentbackground>-14336</commentbackground>
+		<commentfont>
+			<name>SansSerif.bold</name>
+			<style>1</style>
+			<size>13</size>
+		</commentfont>
+		<commentforeground>-16777216</commentforeground>
+	</comment>
+	<comment>
+		<commentxpos>1151</commentxpos>
+		<commentypos>553</commentypos>
+		<commentwidth>174</commentwidth>
+		<commentheight>84</commentheight>
+		<commenttext>Rechteverwaltung pro Raum und Gerät durch Gruppen</commenttext>
+		<commentbackground>-14336</commentbackground>
+		<commentfont>
+			<name>SansSerif.bold</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
