@@ -1185,8 +1185,7 @@
 		<commentypos>0</commentypos>
 		<commentwidth>329</commentwidth>
 		<commentheight>333</commentheight>
-		<commenttext>Regeln werden in Konfigurationsdateien ausgelagert (z.B. JSON, XML ... ).
-Logs und statistikdaten kommen in eine eigene Datenbank</commenttext>
+		<commenttext>Regeln werden in Konfigurationsdateien ausgelagert (z.B. JSON, XML ... ). Logs und statistikdaten kommen in eine eigene Datenbank</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
 			<name>Dialog.bold</name>
@@ -1213,7 +1212,7 @@ Logs und statistikdaten kommen in eine eigene Datenbank</commenttext>
 		<commentxpos>443</commentxpos>
 		<commentypos>103</commentypos>
 		<commentwidth>175</commentwidth>
-		<commentheight>73</commentheight>
+		<commentheight>107</commentheight>
 		<commenttext>Ein Service ist ein Dienst, den das Gerät anbietet z.B. Licht an/aus</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
