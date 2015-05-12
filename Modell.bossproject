@@ -297,8 +297,8 @@
 	</table>
 	<table>
 		<tablename>Sensor</tablename>
-		<tablexpos>393</tablexpos>
-		<tableypos>623</tableypos>
+		<tablexpos>67</tablexpos>
+		<tableypos>239</tableypos>
 		<tablewidth>80</tablewidth>
 		<tableheight>99</tableheight>
 		<weak>false</weak>
@@ -333,8 +333,8 @@
 	</table>
 	<table>
 		<tablename>Einheit</tablename>
-		<tablexpos>436</tablexpos>
-		<tableypos>788</tableypos>
+		<tablexpos>110</tablexpos>
+		<tableypos>404</tableypos>
 		<tablewidth>64</tablewidth>
 		<tableheight>85</tableheight>
 		<weak>false</weak>
@@ -517,8 +517,8 @@
 	</table>
 	<table>
 		<tablename>Aktor</tablename>
-		<tablexpos>400</tablexpos>
-		<tableypos>514</tableypos>
+		<tablexpos>621</tablexpos>
+		<tableypos>734</tableypos>
 		<tablewidth>64</tablewidth>
 		<tableheight>74</tableheight>
 		<weak>false</weak>
@@ -540,57 +540,9 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Verbraucher</tablename>
-		<tablexpos>391</tablexpos>
-		<tableypos>406</tableypos>
-		<tablewidth>106</tablewidth>
-		<tableheight>99</tableheight>
-		<weak>false</weak>
-		<columns>
-			<column>
-				<columnname>ID</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>true</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>true</columnunique>
-			</column>
-			<column>
-				<columnname>Name</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-			<column>
-				<columnname>Verbrauch</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-		</columns>
-		<uniqueCombinations>
-		</uniqueCombinations>
-	</table>
-	<table>
 		<tablename>Messung</tablename>
-		<tablexpos>635</tablexpos>
-		<tableypos>794</tableypos>
+		<tablexpos>413</tablexpos>
+		<tableypos>355</tableypos>
 		<tablewidth>94</tablewidth>
 		<tableheight>155</tableheight>
 		<weak>false</weak>
@@ -716,8 +668,8 @@
 	</table>
 	<table>
 		<tablename>Gerät_Sensor</tablename>
-		<tablexpos>599</tablexpos>
-		<tableypos>618</tableypos>
+		<tablexpos>273</tablexpos>
+		<tableypos>234</tableypos>
 		<tablewidth>163</tablewidth>
 		<tableheight>110</tableheight>
 		<weak>true</weak>
@@ -758,52 +710,9 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Gerät_Verbraucher</tablename>
-		<tablexpos>475</tablexpos>
-		<tableypos>258</tableypos>
-		<tablewidth>193</tablewidth>
-		<tableheight>99</tableheight>
-		<weak>true</weak>
-		<columns>
-			<column>
-				<columnname>ID_Gerät</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename>Gerät</columnreftablename>
-				<columnrefcolumnname>ID</columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>true</columnpk>
-				<columnfk>true</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-			<column>
-				<columnname>ID_Verbraucher</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename>Verbraucher</columnreftablename>
-				<columnrefcolumnname>ID</columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>true</columnpk>
-				<columnfk>true</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-		</columns>
-		<uniqueCombinations>
-			<uniqueCombination>
-				<shortForm>null</shortForm>
-				<combiColumns>
-					<combiColumn>ID_Gerät</combiColumn>
-					<combiColumn>ID_Verbraucher</combiColumn>
-				</combiColumns>
-			</uniqueCombination>
-		</uniqueCombinations>
-	</table>
-	<table>
 		<tablename>Gerät_Aktor</tablename>
-		<tablexpos>611</tablexpos>
-		<tableypos>489</tableypos>
+		<tablexpos>564</tablexpos>
+		<tableypos>533</tableypos>
 		<tablewidth>143</tablewidth>
 		<tableheight>108</tableheight>
 		<weak>true</weak>
@@ -982,6 +891,78 @@
 			</uniqueCombination>
 		</uniqueCombinations>
 	</table>
+	<table>
+		<tablename>Zustand</tablename>
+		<tablexpos>175</tablexpos>
+		<tableypos>589</tableypos>
+		<tablewidth>135</tablewidth>
+		<tableheight>126</tableheight>
+		<weak>false</weak>
+		<columns>
+			<column>
+				<columnname>ID</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>true</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>true</columnunique>
+			</column>
+			<column>
+				<columnname>Wert</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>ID_Einheit</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>Einheit</columnreftablename>
+				<columnrefcolumnname>ID</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>ID_Aktor</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>Gerät_Aktor</columnreftablename>
+				<columnrefcolumnname>ID_Aktor</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>ID_Gerät</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>Gerät_Aktor</columnreftablename>
+				<columnrefcolumnname>ID_Gerät</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+		</columns>
+		<uniqueCombinations>
+		</uniqueCombinations>
+	</table>
 </tables>
 <relations>
 	<relation>
@@ -1111,24 +1092,6 @@
 		<relationstrong></relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Gerät</relationtablea>
-		<relationtableb>Gerät_Verbraucher</relationtableb>
-		<relationtypea>0</relationtypea>
-		<relationtypeb>1</relationtypeb>
-		<relationcarda>1</relationcarda>
-		<relationcardb>0</relationcardb>
-		<relationstrong>Gerät</relationstrong>
-	</relation>
-	<relation>
-		<relationtablea>Verbraucher</relationtablea>
-		<relationtableb>Gerät_Verbraucher</relationtableb>
-		<relationtypea>0</relationtypea>
-		<relationtypeb>1</relationtypeb>
-		<relationcarda>1</relationcarda>
-		<relationcardb>0</relationcardb>
-		<relationstrong>Verbraucher</relationstrong>
-	</relation>
-	<relation>
 		<relationtablea>Aktor</relationtablea>
 		<relationtableb>Gerät_Aktor</relationtableb>
 		<relationtypea>0</relationtypea>
@@ -1164,6 +1127,24 @@
 		<relationcardb>0</relationcardb>
 		<relationstrong>Nutzer</relationstrong>
 	</relation>
+	<relation>
+		<relationtablea>Zustand</relationtablea>
+		<relationtableb>Einheit</relationtableb>
+		<relationtypea>1</relationtypea>
+		<relationtypeb>0</relationtypeb>
+		<relationcarda>0</relationcarda>
+		<relationcardb>1</relationcardb>
+		<relationstrong></relationstrong>
+	</relation>
+	<relation>
+		<relationtablea>Zustand</relationtablea>
+		<relationtableb>Gerät_Aktor</relationtableb>
+		<relationtypea>1</relationtypea>
+		<relationtypeb>0</relationtypeb>
+		<relationcarda>0</relationcarda>
+		<relationcardb>1</relationcardb>
+		<relationstrong>Zustand</relationstrong>
+	</relation>
 </relations>
 <comments>
 	<comment>
@@ -1184,7 +1165,7 @@
 		<commentxpos>0</commentxpos>
 		<commentypos>0</commentypos>
 		<commentwidth>329</commentwidth>
-		<commentheight>333</commentheight>
+		<commentheight>186</commentheight>
 		<commenttext>Regeln werden in Konfigurationsdateien ausgelagert (z.B. JSON, XML ... ). Logs und statistikdaten kommen in eine eigene Datenbank</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
