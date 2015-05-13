@@ -249,10 +249,10 @@
 	</table>
 	<table>
 		<tablename>Service</tablename>
-		<tablexpos>616</tablexpos>
-		<tableypos>85</tableypos>
-		<tablewidth>99</tablewidth>
-		<tableheight>110</tableheight>
+		<tablexpos>789</tablexpos>
+		<tableypos>678</tableypos>
+		<tablewidth>104</tablewidth>
+		<tableheight>156</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -297,7 +297,7 @@
 	</table>
 	<table>
 		<tablename>Sensor</tablename>
-		<tablexpos>67</tablexpos>
+		<tablexpos>68</tablexpos>
 		<tableypos>239</tableypos>
 		<tablewidth>80</tablewidth>
 		<tableheight>99</tableheight>
@@ -517,8 +517,8 @@
 	</table>
 	<table>
 		<tablename>Aktor</tablename>
-		<tablexpos>621</tablexpos>
-		<tableypos>734</tableypos>
+		<tablexpos>506</tablexpos>
+		<tableypos>725</tableypos>
 		<tablewidth>64</tablewidth>
 		<tableheight>74</tableheight>
 		<weak>false</weak>
@@ -535,12 +535,24 @@
 				<columnfk>false</columnfk>
 				<columnunique>true</columnunique>
 			</column>
+			<column>
+				<columnname>Name</columnname>
+				<columntype>varchar(25)</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
 		</columns>
 		<uniqueCombinations>
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Messung</tablename>
+		<tablename>Log_Messung</tablename>
 		<tablexpos>413</tablexpos>
 		<tableypos>355</tableypos>
 		<tablewidth>94</tablewidth>
@@ -624,49 +636,6 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Service_Gerät</tablename>
-		<tablexpos>783</tablexpos>
-		<tableypos>85</tableypos>
-		<tablewidth>173</tablewidth>
-		<tableheight>106</tableheight>
-		<weak>true</weak>
-		<columns>
-			<column>
-				<columnname>ID_Service</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename>Service</columnreftablename>
-				<columnrefcolumnname>ID</columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>true</columnpk>
-				<columnfk>true</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-			<column>
-				<columnname>ID_Gerät</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename>Gerät</columnreftablename>
-				<columnrefcolumnname>ID</columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>true</columnpk>
-				<columnfk>true</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-		</columns>
-		<uniqueCombinations>
-			<uniqueCombination>
-				<shortForm>null</shortForm>
-				<combiColumns>
-					<combiColumn>ID_Service</combiColumn>
-					<combiColumn>ID_Gerät</combiColumn>
-				</combiColumns>
-			</uniqueCombination>
-		</uniqueCombinations>
-	</table>
-	<table>
 		<tablename>Gerät_Sensor</tablename>
 		<tablexpos>273</tablexpos>
 		<tableypos>234</tableypos>
@@ -741,6 +710,18 @@
 				<columnfk>true</columnfk>
 				<columnunique>false</columnunique>
 			</column>
+			<column>
+				<columnname>ID_Service</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>Service</columnreftablename>
+				<columnrefcolumnname>ID</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>true</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
 		</columns>
 		<uniqueCombinations>
 			<uniqueCombination>
@@ -748,6 +729,7 @@
 				<combiColumns>
 					<combiColumn>ID_Aktor</combiColumn>
 					<combiColumn>ID_Gerät</combiColumn>
+					<combiColumn>ID_Service</combiColumn>
 				</combiColumns>
 			</uniqueCombination>
 		</uniqueCombinations>
@@ -892,11 +874,11 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Zustand</tablename>
+		<tablename>Log-Zustand</tablename>
 		<tablexpos>175</tablexpos>
 		<tableypos>589</tableypos>
 		<tablewidth>135</tablewidth>
-		<tableheight>126</tableheight>
+		<tableheight>164</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -959,8 +941,75 @@
 				<columnfk>true</columnfk>
 				<columnunique>false</columnunique>
 			</column>
+			<column>
+				<columnname>Timestamp</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
 		</columns>
 		<uniqueCombinations>
+		</uniqueCombinations>
+	</table>
+	<table>
+		<tablename>Log_Konnektor</tablename>
+		<tablexpos>825</tablexpos>
+		<tableypos>38</tableypos>
+		<tablewidth>170</tablewidth>
+		<tableheight>200</tableheight>
+		<weak>false</weak>
+		<columns>
+			<column>
+				<columnname>Timestap</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>true</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>ID_Konnektor</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>Konnektor</columnreftablename>
+				<columnrefcolumnname>ID</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>true</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>Daten</columnname>
+				<columntype>xml</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+		</columns>
+		<uniqueCombinations>
+			<uniqueCombination>
+				<shortForm>null</shortForm>
+				<combiColumns>
+					<combiColumn>ID_Konnektor</combiColumn>
+					<combiColumn>Timestap</combiColumn>
+				</combiColumns>
+			</uniqueCombination>
 		</uniqueCombinations>
 	</table>
 </tables>
@@ -1038,24 +1087,6 @@
 		<relationstrong>Gruppe</relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Service</relationtablea>
-		<relationtableb>Service_Gerät</relationtableb>
-		<relationtypea>0</relationtypea>
-		<relationtypeb>1</relationtypeb>
-		<relationcarda>1</relationcarda>
-		<relationcardb>0</relationcardb>
-		<relationstrong>Service</relationstrong>
-	</relation>
-	<relation>
-		<relationtablea>Gerät</relationtablea>
-		<relationtableb>Service_Gerät</relationtableb>
-		<relationtypea>0</relationtypea>
-		<relationtypeb>1</relationtypeb>
-		<relationcarda>1</relationcarda>
-		<relationcardb>0</relationcardb>
-		<relationstrong>Gerät</relationstrong>
-	</relation>
-	<relation>
 		<relationtablea>Gerät</relationtablea>
 		<relationtableb>Gerät_Sensor</relationtableb>
 		<relationtypea>0</relationtypea>
@@ -1074,17 +1105,17 @@
 		<relationstrong>Sensor</relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Messung</relationtablea>
+		<relationtablea>Log_Messung</relationtablea>
 		<relationtableb>Gerät_Sensor</relationtableb>
 		<relationtypea>1</relationtypea>
 		<relationtypeb>0</relationtypeb>
 		<relationcarda>0</relationcarda>
 		<relationcardb>1</relationcardb>
-		<relationstrong>Messung</relationstrong>
+		<relationstrong>Log_Messung</relationstrong>
 	</relation>
 	<relation>
 		<relationtablea>Einheit</relationtablea>
-		<relationtableb>Messung</relationtableb>
+		<relationtableb>Log_Messung</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
@@ -1128,7 +1159,7 @@
 		<relationstrong>Nutzer</relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Zustand</relationtablea>
+		<relationtablea>Log-Zustand</relationtablea>
 		<relationtableb>Einheit</relationtableb>
 		<relationtypea>1</relationtypea>
 		<relationtypeb>0</relationtypeb>
@@ -1137,25 +1168,43 @@
 		<relationstrong></relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Zustand</relationtablea>
+		<relationtablea>Log-Zustand</relationtablea>
 		<relationtableb>Gerät_Aktor</relationtableb>
 		<relationtypea>1</relationtypea>
 		<relationtypeb>0</relationtypeb>
 		<relationcarda>0</relationcarda>
 		<relationcardb>1</relationcardb>
-		<relationstrong>Zustand</relationstrong>
+		<relationstrong>Log-Zustand</relationstrong>
+	</relation>
+	<relation>
+		<relationtablea>Service</relationtablea>
+		<relationtableb>Gerät_Aktor</relationtableb>
+		<relationtypea>0</relationtypea>
+		<relationtypeb>1</relationtypeb>
+		<relationcarda>1</relationcarda>
+		<relationcardb>1</relationcardb>
+		<relationstrong>Service</relationstrong>
+	</relation>
+	<relation>
+		<relationtablea>Log_Konnektor</relationtablea>
+		<relationtableb>Konnektor</relationtableb>
+		<relationtypea>1</relationtypea>
+		<relationtypeb>0</relationtypeb>
+		<relationcarda>0</relationcarda>
+		<relationcardb>1</relationcardb>
+		<relationstrong></relationstrong>
 	</relation>
 </relations>
 <comments>
 	<comment>
-		<commentxpos>1056</commentxpos>
-		<commentypos>31</commentypos>
+		<commentxpos>1060</commentxpos>
+		<commentypos>1</commentypos>
 		<commentwidth>176</commentwidth>
 		<commentheight>158</commentheight>
 		<commenttext>Zusammenfassung mehrerer Räume unter einem Namen z.B. Etage</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>Dialog.bold</name>
+			<name>Dialog</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
@@ -1169,7 +1218,7 @@
 		<commenttext>Regeln werden in Konfigurationsdateien ausgelagert (z.B. JSON, XML ... ). Logs und statistikdaten kommen in eine eigene Datenbank</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>Dialog.bold</name>
+			<name>Dialog</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
@@ -1183,7 +1232,7 @@
 		<commenttext>Ein Gerät kann mehrere Verbraucher, Sensoren und Aktoren haben</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>Dialog.bold</name>
+			<name>Dialog</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
@@ -1193,11 +1242,11 @@
 		<commentxpos>443</commentxpos>
 		<commentypos>103</commentypos>
 		<commentwidth>175</commentwidth>
-		<commentheight>107</commentheight>
+		<commentheight>108</commentheight>
 		<commenttext>Ein Service ist ein Dienst, den das Gerät anbietet z.B. Licht an/aus</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>SansSerif.bold</name>
+			<name>Dialog</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
@@ -1211,7 +1260,7 @@
 		<commenttext>Rechteverwaltung pro Raum und Gerät durch Gruppen</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>SansSerif.bold</name>
+			<name>Dialog</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
