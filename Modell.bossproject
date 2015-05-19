@@ -5,7 +5,7 @@
 		<tablexpos>845</tablexpos>
 		<tableypos>260</tableypos>
 		<tablewidth>110</tablewidth>
-		<tableheight>150</tableheight>
+		<tableheight>154</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -61,7 +61,7 @@
 				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Konnektor</columnreftablename>
-				<columnrefcolumnname>ID</columnrefcolumnname>
+				<columnrefcolumnname>KID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
@@ -88,8 +88,8 @@
 		<tablename>Raum</tablename>
 		<tablexpos>1279</tablexpos>
 		<tableypos>374</tableypos>
-		<tablewidth>69</tablewidth>
-		<tableheight>80</tableheight>
+		<tablewidth>79</tablewidth>
+		<tableheight>104</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -122,14 +122,14 @@
 	</table>
 	<table>
 		<tablename>Konnektor</tablename>
-		<tablexpos>1133</tablexpos>
-		<tableypos>251</tableypos>
+		<tablexpos>1025</tablexpos>
+		<tableypos>163</tableypos>
 		<tablewidth>106</tablewidth>
 		<tableheight>108</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>ID</columnname>
+				<columnname>KID</columnname>
 				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -170,10 +170,10 @@
 	</table>
 	<table>
 		<tablename>Zone</tablename>
-		<tablexpos>1716</tablexpos>
-		<tableypos>374</tableypos>
-		<tablewidth>56</tablewidth>
-		<tableheight>80</tableheight>
+		<tablexpos>1711</tablexpos>
+		<tableypos>281</tableypos>
+		<tablewidth>143</tablewidth>
+		<tableheight>130</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -200,14 +200,26 @@
 				<columnfk>false</columnfk>
 				<columnunique>false</columnunique>
 			</column>
+			<column>
+				<columnname>IDUmgebendeZone</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>Zone</columnreftablename>
+				<columnrefcolumnname>ID</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
 		</columns>
 		<uniqueCombinations>
 		</uniqueCombinations>
 	</table>
 	<table>
 		<tablename>Zone_Raum</tablename>
-		<tablexpos>1458</tablexpos>
-		<tableypos>361</tableypos>
+		<tablexpos>1569</tablexpos>
+		<tableypos>508</tableypos>
 		<tablewidth>143</tablewidth>
 		<tableheight>106</tableheight>
 		<weak>true</weak>
@@ -249,7 +261,7 @@
 	</table>
 	<table>
 		<tablename>Service</tablename>
-		<tablexpos>660</tablexpos>
+		<tablexpos>661</tablexpos>
 		<tableypos>13</tableypos>
 		<tablewidth>104</tablewidth>
 		<tableheight>156</tableheight>
@@ -297,10 +309,10 @@
 	</table>
 	<table>
 		<tablename>Sensor</tablename>
-		<tablexpos>68</tablexpos>
-		<tableypos>239</tableypos>
+		<tablexpos>69</tablexpos>
+		<tableypos>231</tableypos>
 		<tablewidth>80</tablewidth>
-		<tableheight>99</tableheight>
+		<tableheight>106</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -327,14 +339,26 @@
 				<columnfk>false</columnfk>
 				<columnunique>false</columnunique>
 			</column>
+			<column>
+				<columnname>EID</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>Einheit</columnreftablename>
+				<columnrefcolumnname>EID</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
 		</columns>
 		<uniqueCombinations>
 		</uniqueCombinations>
 	</table>
 	<table>
 		<tablename>Einheit</tablename>
-		<tablexpos>110</tablexpos>
-		<tableypos>404</tableypos>
+		<tablexpos>79</tablexpos>
+		<tableypos>423</tableypos>
 		<tablewidth>64</tablewidth>
 		<tableheight>85</tableheight>
 		<weak>false</weak>
@@ -517,10 +541,10 @@
 	</table>
 	<table>
 		<tablename>Aktor</tablename>
-		<tablexpos>623</tablexpos>
-		<tableypos>770</tableypos>
-		<tablewidth>64</tablewidth>
-		<tableheight>74</tableheight>
+		<tablexpos>430</tablexpos>
+		<tableypos>829</tableypos>
+		<tablewidth>91</tablewidth>
+		<tableheight>108</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -547,15 +571,27 @@
 				<columnfk>false</columnfk>
 				<columnunique>false</columnunique>
 			</column>
+			<column>
+				<columnname>EID</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>Einheit</columnreftablename>
+				<columnrefcolumnname>EID</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
 		</columns>
 		<uniqueCombinations>
 		</uniqueCombinations>
 	</table>
 	<table>
 		<tablename>Log_Messung</tablename>
-		<tablexpos>413</tablexpos>
-		<tableypos>355</tableypos>
-		<tablewidth>94</tablewidth>
+		<tablexpos>219</tablexpos>
+		<tableypos>354</tableypos>
+		<tablewidth>118</tablewidth>
 		<tableheight>155</tableheight>
 		<weak>false</weak>
 		<columns>
@@ -596,18 +632,6 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>EID</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename>Einheit</columnreftablename>
-				<columnrefcolumnname>EID</columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>true</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-			<column>
 				<columnname>GSID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
@@ -625,10 +649,10 @@
 	</table>
 	<table>
 		<tablename>Nutzer</tablename>
-		<tablexpos>1613</tablexpos>
+		<tablexpos>1614</tablexpos>
 		<tableypos>741</tableypos>
-		<tablewidth>170</tablewidth>
-		<tableheight>200</tableheight>
+		<tablewidth>173</tablewidth>
+		<tableheight>201</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -710,9 +734,9 @@
 	<table>
 		<tablename>Gruppe_Nutzer</tablename>
 		<tablexpos>1356</tablexpos>
-		<tableypos>756</tableypos>
-		<tablewidth>171</tablewidth>
-		<tableheight>134</tableheight>
+		<tableypos>758</tableypos>
+		<tablewidth>173</tablewidth>
+		<tableheight>135</tableheight>
 		<weak>true</weak>
 		<columns>
 			<column>
@@ -763,11 +787,11 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Log-Zustand</tablename>
-		<tablexpos>187</tablexpos>
-		<tableypos>532</tableypos>
+		<tablename>Log_Zustand</tablename>
+		<tablexpos>254</tablexpos>
+		<tableypos>510</tableypos>
 		<tablewidth>135</tablewidth>
-		<tableheight>164</tableheight>
+		<tableheight>143</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -792,18 +816,6 @@
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-			<column>
-				<columnname>EID</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename>Einheit</columnreftablename>
-				<columnrefcolumnname>EID</columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>true</columnfk>
 				<columnunique>false</columnunique>
 			</column>
 			<column>
@@ -836,14 +848,14 @@
 	</table>
 	<table>
 		<tablename>Log_Konnektor</tablename>
-		<tablexpos>1368</tablexpos>
-		<tableypos>136</tableypos>
-		<tablewidth>123</tablewidth>
-		<tableheight>115</tableheight>
+		<tablexpos>1243</tablexpos>
+		<tableypos>133</tableypos>
+		<tablewidth>163</tablewidth>
+		<tableheight>116</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>Timestap</columnname>
+				<columnname>LKID</columnname>
 				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -852,18 +864,30 @@
 				<columndefault></columndefault>
 				<columnpk>true</columnpk>
 				<columnfk>false</columnfk>
-				<columnunique>false</columnunique>
+				<columnunique>true</columnunique>
 			</column>
 			<column>
-				<columnname>ID_Konnektor</columnname>
+				<columnname>KID</columnname>
 				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Konnektor</columnreftablename>
-				<columnrefcolumnname>ID</columnrefcolumnname>
+				<columnrefcolumnname>KID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
-				<columnpk>true</columnpk>
+				<columnpk>false</columnpk>
 				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>Timestap</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
 				<columnunique>false</columnunique>
 			</column>
 			<column>
@@ -880,21 +904,14 @@
 			</column>
 		</columns>
 		<uniqueCombinations>
-			<uniqueCombination>
-				<shortForm>null</shortForm>
-				<combiColumns>
-					<combiColumn>ID_Konnektor</combiColumn>
-					<combiColumn>Timestap</combiColumn>
-				</combiColumns>
-			</uniqueCombination>
 		</uniqueCombinations>
 	</table>
 	<table>
 		<tablename>GeräteSensor</tablename>
-		<tablexpos>509</tablexpos>
-		<tableypos>239</tableypos>
-		<tablewidth>113</tablewidth>
-		<tableheight>101</tableheight>
+		<tablexpos>516</tablexpos>
+		<tableypos>250</tableypos>
+		<tablewidth>114</tablewidth>
+		<tableheight>104</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -939,9 +956,9 @@
 	</table>
 	<table>
 		<tablename>GeräteAktor</tablename>
-		<tablexpos>610</tablexpos>
-		<tableypos>559</tableypos>
-		<tablewidth>91</tablewidth>
+		<tablexpos>609</tablexpos>
+		<tableypos>549</tableypos>
+		<tablewidth>116</tablewidth>
 		<tableheight>108</tableheight>
 		<weak>false</weak>
 		<columns>
@@ -987,10 +1004,10 @@
 	</table>
 	<table>
 		<tablename>Service_Gerät</tablename>
-		<tablexpos>840</tablexpos>
-		<tableypos>44</tableypos>
-		<tablewidth>123</tablewidth>
-		<tableheight>94</tableheight>
+		<tablexpos>841</tablexpos>
+		<tableypos>45</tableypos>
+		<tablewidth>149</tablewidth>
+		<tableheight>126</tableheight>
 		<weak>true</weak>
 		<columns>
 			<column>
@@ -1026,6 +1043,378 @@
 					<combiColumn>GID</combiColumn>
 				</combiColumns>
 			</uniqueCombination>
+		</uniqueCombinations>
+	</table>
+	<table>
+		<tablename>Regel</tablename>
+		<tablexpos>749</tablexpos>
+		<tableypos>719</tableypos>
+		<tablewidth>169</tablewidth>
+		<tableheight>201</tableheight>
+		<weak>false</weak>
+		<columns>
+			<column>
+				<columnname>RID</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>true</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>true</columnunique>
+			</column>
+			<column>
+				<columnname>Active</columnname>
+				<columntype>boolean</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>InsertDate</columnname>
+				<columntype>date</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>ModifyDate</columnname>
+				<columntype>date</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>Permissions</columnname>
+				<columntype>xml</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>Conditions</columnname>
+				<columntype>xml</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>Actions</columnname>
+				<columntype>xml</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+		</columns>
+		<uniqueCombinations>
+		</uniqueCombinations>
+	</table>
+	<table>
+		<tablename>Log_Regel</tablename>
+		<tablexpos>958</tablexpos>
+		<tableypos>794</tableypos>
+		<tablewidth>173</tablewidth>
+		<tableheight>201</tableheight>
+		<weak>false</weak>
+		<columns>
+			<column>
+				<columnname>LRID</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>true</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>true</columnunique>
+			</column>
+			<column>
+				<columnname>Timestamp</columnname>
+				<columntype>xml</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>RID</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>Regel</columnreftablename>
+				<columnrefcolumnname>RID</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+		</columns>
+		<uniqueCombinations>
+		</uniqueCombinations>
+	</table>
+	<table>
+		<tablename>History_Log_Messung</tablename>
+		<tablexpos>381</tablexpos>
+		<tableypos>381</tableypos>
+		<tablewidth>175</tablewidth>
+		<tableheight>131</tableheight>
+		<weak>false</weak>
+		<columns>
+			<column>
+				<columnname>HLMID</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>true</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>true</columnunique>
+			</column>
+			<column>
+				<columnname>Wert</columnname>
+				<columntype>numeric</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>Timestamp</columnname>
+				<columntype>timestamp</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>GSID</columnname>
+				<columntype>serial</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>GeräteSensor</columnreftablename>
+				<columnrefcolumnname>GSID</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+		</columns>
+		<uniqueCombinations>
+		</uniqueCombinations>
+	</table>
+	<table>
+		<tablename>History_Log_Zustand</tablename>
+		<tablexpos>390</tablexpos>
+		<tableypos>665</tableypos>
+		<tablewidth>170</tablewidth>
+		<tableheight>129</tableheight>
+		<weak>false</weak>
+		<columns>
+			<column>
+				<columnname>HLSID</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>true</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>true</columnunique>
+			</column>
+			<column>
+				<columnname>Wert</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>Timestamp</columnname>
+				<columntype>timestamp</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>GAIDX</columnname>
+				<columntype>serial</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>GeräteAktor</columnreftablename>
+				<columnrefcolumnname>GAID</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+		</columns>
+		<uniqueCombinations>
+		</uniqueCombinations>
+	</table>
+	<table>
+		<tablename>History_Log_Konnektor</tablename>
+		<tablexpos>1233</tablexpos>
+		<tableypos>248</tableypos>
+		<tablewidth>188</tablewidth>
+		<tableheight>123</tableheight>
+		<weak>false</weak>
+		<columns>
+			<column>
+				<columnname>HLKID</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>true</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>true</columnunique>
+			</column>
+			<column>
+				<columnname>Timestap</columnname>
+				<columntype>timestamp</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>Daten</columnname>
+				<columntype>xml</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>KID</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>Konnektor</columnreftablename>
+				<columnrefcolumnname>KID</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+		</columns>
+		<uniqueCombinations>
+		</uniqueCombinations>
+	</table>
+	<table>
+		<tablename>History_Log_Regel</tablename>
+		<tablexpos>524</tablexpos>
+		<tableypos>918</tableypos>
+		<tablewidth>170</tablewidth>
+		<tableheight>200</tableheight>
+		<weak>false</weak>
+		<columns>
+			<column>
+				<columnname>HLRID</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>true</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>true</columnunique>
+			</column>
+			<column>
+				<columnname>Timestamp</columnname>
+				<columntype>timestamp</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>RID</columnname>
+				<columntype>integer</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>Regel</columnreftablename>
+				<columnrefcolumnname>RID</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+		</columns>
+		<uniqueCombinations>
 		</uniqueCombinations>
 	</table>
 </tables>
@@ -1103,15 +1492,6 @@
 		<relationstrong>Gruppe</relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Einheit</relationtablea>
-		<relationtableb>Log_Messung</relationtableb>
-		<relationtypea>0</relationtypea>
-		<relationtypeb>1</relationtypeb>
-		<relationcarda>1</relationcarda>
-		<relationcardb>0</relationcardb>
-		<relationstrong></relationstrong>
-	</relation>
-	<relation>
 		<relationtablea>Gruppe</relationtablea>
 		<relationtableb>Gruppe_Nutzer</relationtableb>
 		<relationtypea>0</relationtypea>
@@ -1128,15 +1508,6 @@
 		<relationcarda>1</relationcarda>
 		<relationcardb>0</relationcardb>
 		<relationstrong>Nutzer</relationstrong>
-	</relation>
-	<relation>
-		<relationtablea>Log-Zustand</relationtablea>
-		<relationtableb>Einheit</relationtableb>
-		<relationtypea>1</relationtypea>
-		<relationtypeb>0</relationtypeb>
-		<relationcarda>0</relationcarda>
-		<relationcardb>1</relationcardb>
-		<relationstrong></relationstrong>
 	</relation>
 	<relation>
 		<relationtablea>Log_Konnektor</relationtablea>
@@ -1194,7 +1565,7 @@
 	</relation>
 	<relation>
 		<relationtablea>GeräteAktor</relationtablea>
-		<relationtableb>Log-Zustand</relationtableb>
+		<relationtableb>Log_Zustand</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
@@ -1219,17 +1590,89 @@
 		<relationcardb>0</relationcardb>
 		<relationstrong>Gerät</relationstrong>
 	</relation>
+	<relation>
+		<relationtablea>Sensor</relationtablea>
+		<relationtableb>Einheit</relationtableb>
+		<relationtypea>1</relationtypea>
+		<relationtypeb>0</relationtypeb>
+		<relationcarda>0</relationcarda>
+		<relationcardb>1</relationcardb>
+		<relationstrong></relationstrong>
+	</relation>
+	<relation>
+		<relationtablea>Einheit</relationtablea>
+		<relationtableb>Aktor</relationtableb>
+		<relationtypea>0</relationtypea>
+		<relationtypeb>1</relationtypeb>
+		<relationcarda>1</relationcarda>
+		<relationcardb>0</relationcardb>
+		<relationstrong></relationstrong>
+	</relation>
+	<relation>
+		<relationtablea>Zone</relationtablea>
+		<relationtableb>Zone</relationtableb>
+		<relationtypea>0</relationtypea>
+		<relationtypeb>0</relationtypeb>
+		<relationcarda>1</relationcarda>
+		<relationcardb>1</relationcardb>
+		<relationstrong></relationstrong>
+	</relation>
+	<relation>
+		<relationtablea>Regel</relationtablea>
+		<relationtableb>Log_Regel</relationtableb>
+		<relationtypea>0</relationtypea>
+		<relationtypeb>1</relationtypeb>
+		<relationcarda>1</relationcarda>
+		<relationcardb>0</relationcardb>
+		<relationstrong></relationstrong>
+	</relation>
+	<relation>
+		<relationtablea>GeräteSensor</relationtablea>
+		<relationtableb>History_Log_Messung</relationtableb>
+		<relationtypea>0</relationtypea>
+		<relationtypeb>1</relationtypeb>
+		<relationcarda>1</relationcarda>
+		<relationcardb>0</relationcardb>
+		<relationstrong></relationstrong>
+	</relation>
+	<relation>
+		<relationtablea>GeräteAktor</relationtablea>
+		<relationtableb>History_Log_Zustand</relationtableb>
+		<relationtypea>0</relationtypea>
+		<relationtypeb>1</relationtypeb>
+		<relationcarda>1</relationcarda>
+		<relationcardb>0</relationcardb>
+		<relationstrong></relationstrong>
+	</relation>
+	<relation>
+		<relationtablea>History_Log_Konnektor</relationtablea>
+		<relationtableb>Konnektor</relationtableb>
+		<relationtypea>1</relationtypea>
+		<relationtypeb>0</relationtypeb>
+		<relationcarda>0</relationcarda>
+		<relationcardb>1</relationcardb>
+		<relationstrong></relationstrong>
+	</relation>
+	<relation>
+		<relationtablea>History_Log_Regel</relationtablea>
+		<relationtableb>Regel</relationtableb>
+		<relationtypea>1</relationtypea>
+		<relationtypeb>0</relationtypeb>
+		<relationcarda>0</relationcarda>
+		<relationcardb>1</relationcardb>
+		<relationstrong></relationstrong>
+	</relation>
 </relations>
 <comments>
 	<comment>
-		<commentxpos>1060</commentxpos>
-		<commentypos>1</commentypos>
+		<commentxpos>1764</commentxpos>
+		<commentypos>468</commentypos>
 		<commentwidth>176</commentwidth>
 		<commentheight>158</commentheight>
 		<commenttext>Zusammenfassung mehrerer Räume unter einem Namen z.B. Etage</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>Dialog.bold</name>
+			<name>Dialog</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
@@ -1240,24 +1683,24 @@
 		<commentypos>0</commentypos>
 		<commentwidth>329</commentwidth>
 		<commentheight>186</commentheight>
-		<commenttext>Regeln werden in Konfigurationsdateien ausgelagert (z.B. JSON, XML ... ). Logs und statistikdaten kommen in eine eigene Datenbank</commenttext>
+		<commenttext>Werden wenn Geräte/Konnektoren aus dem Smarthome System entfernt werden diese auch aus der Datenbank gelöscht?</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>Dialog.bold</name>
+			<name>Dialog</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
 		<commentforeground>-16777216</commentforeground>
 	</comment>
 	<comment>
-		<commentxpos>953</commentxpos>
+		<commentxpos>954</commentxpos>
 		<commentypos>360</commentypos>
 		<commentwidth>154</commentwidth>
-		<commentheight>109</commentheight>
+		<commentheight>110</commentheight>
 		<commenttext>Ein Gerät kann mehrere Verbraucher, Sensoren und Aktoren haben</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>Dialog.bold</name>
+			<name>Dialog</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
@@ -1265,30 +1708,58 @@
 	</comment>
 	<comment>
 		<commentxpos>443</commentxpos>
-		<commentypos>103</commentypos>
-		<commentwidth>175</commentwidth>
+		<commentypos>104</commentypos>
+		<commentwidth>176</commentwidth>
 		<commentheight>108</commentheight>
 		<commenttext>Ein Service ist ein Dienst, den das Gerät anbietet z.B. Licht an/aus</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>Dialog.bold</name>
+			<name>Dialog</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
 		<commentforeground>-16777216</commentforeground>
 	</comment>
 	<comment>
-		<commentxpos>1151</commentxpos>
-		<commentypos>553</commentypos>
+		<commentxpos>1154</commentxpos>
+		<commentypos>554</commentypos>
 		<commentwidth>174</commentwidth>
-		<commentheight>84</commentheight>
+		<commentheight>85</commentheight>
 		<commenttext>Rechteverwaltung pro Raum und Gerät durch Gruppen</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
-			<name>Dialog.bold</name>
+			<name>Dialog</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
 		<commentforeground>-16777216</commentforeground>
+	</comment>
+	<comment>
+		<commentxpos>121</commentxpos>
+		<commentypos>663</commentypos>
+		<commentwidth>195</commentwidth>
+		<commentheight>214</commentheight>
+		<commenttext>Macht es nach dem aktuellen Stand echt sinn Sensor und Aktor zu trennen? Die Sensor und Aktor Tabellen sind gleich, die GerätSensor und GerätAktor Tabellen sind gleich, Die Log Tabellen sind gleich. Ein Boolscher wert IsSensor würde 3 Tabellen ersetzen</commenttext>
+		<commentbackground>-14336</commentbackground>
+		<commentfont>
+			<name>Dialog</name>
+			<style>1</style>
+			<size>13</size>
+		</commentfont>
+		<commentforeground>-15066598</commentforeground>
+	</comment>
+	<comment>
+		<commentxpos>763</commentxpos>
+		<commentypos>924</commentypos>
+		<commentwidth>193</commentwidth>
+		<commentheight>99</commentheight>
+		<commenttext>Entweder die Regeln durch die Regeltabelle darstellen, oder durch eine große XML Datei</commenttext>
+		<commentbackground>-14336</commentbackground>
+		<commentfont>
+			<name>Dialog</name>
+			<style>1</style>
+			<size>13</size>
+		</commentfont>
+		<commentforeground>-15066598</commentforeground>
 	</comment>
 </comments>
