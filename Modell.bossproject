@@ -5,7 +5,7 @@
 		<tablexpos>845</tablexpos>
 		<tableypos>260</tableypos>
 		<tablewidth>110</tablewidth>
-		<tableheight>154</tableheight>
+		<tableheight>155</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -88,8 +88,8 @@
 		<tablename>Raum</tablename>
 		<tablexpos>1279</tablexpos>
 		<tableypos>374</tableypos>
-		<tablewidth>79</tablewidth>
-		<tableheight>104</tableheight>
+		<tablewidth>80</tablewidth>
+		<tableheight>106</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -201,16 +201,16 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>IDUmgebendeZone</columnname>
+				<columnname>IDX</columnname>
 				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Zone</columnreftablename>
 				<columnrefcolumnname>ID</columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
+				<columnnotnull>false</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>true</columnfk>
-				<columnunique>false</columnunique>
+				<columnunique>true</columnunique>
 			</column>
 		</columns>
 		<uniqueCombinations>
@@ -218,7 +218,7 @@
 	</table>
 	<table>
 		<tablename>Zone_Raum</tablename>
-		<tablexpos>1569</tablexpos>
+		<tablexpos>1570</tablexpos>
 		<tableypos>508</tableypos>
 		<tablewidth>143</tablewidth>
 		<tableheight>106</tableheight>
@@ -263,7 +263,7 @@
 		<tablename>Service</tablename>
 		<tablexpos>661</tablexpos>
 		<tableypos>13</tableypos>
-		<tablewidth>104</tablewidth>
+		<tablewidth>106</tablewidth>
 		<tableheight>156</tableheight>
 		<weak>false</weak>
 		<columns>
@@ -308,7 +308,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Sensor</tablename>
+		<tablename>Komponente</tablename>
 		<tablexpos>69</tablexpos>
 		<tableypos>231</tableypos>
 		<tablewidth>80</tablewidth>
@@ -316,7 +316,7 @@
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>SID</columnname>
+				<columnname>KID</columnname>
 				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -351,13 +351,25 @@
 				<columnfk>true</columnfk>
 				<columnunique>false</columnunique>
 			</column>
+			<column>
+				<columnname>Typ</columnname>
+				<columntype>boolean</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
 		</columns>
 		<uniqueCombinations>
 		</uniqueCombinations>
 	</table>
 	<table>
 		<tablename>Einheit</tablename>
-		<tablexpos>79</tablexpos>
+		<tablexpos>80</tablexpos>
 		<tableypos>423</tableypos>
 		<tablewidth>64</tablewidth>
 		<tableheight>85</tableheight>
@@ -540,56 +552,8 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Aktor</tablename>
-		<tablexpos>430</tablexpos>
-		<tableypos>829</tableypos>
-		<tablewidth>91</tablewidth>
-		<tableheight>108</tableheight>
-		<weak>false</weak>
-		<columns>
-			<column>
-				<columnname>AID</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>true</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>true</columnunique>
-			</column>
-			<column>
-				<columnname>Name</columnname>
-				<columntype>varchar(25)</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-			<column>
-				<columnname>EID</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename>Einheit</columnreftablename>
-				<columnrefcolumnname>EID</columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>true</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-		</columns>
-		<uniqueCombinations>
-		</uniqueCombinations>
-	</table>
-	<table>
-		<tablename>Log_Messung</tablename>
-		<tablexpos>219</tablexpos>
+		<tablename>Log_Komponente</tablename>
+		<tablexpos>220</tablexpos>
 		<tableypos>354</tableypos>
 		<tablewidth>118</tablewidth>
 		<tableheight>155</tableheight>
@@ -635,8 +599,8 @@
 				<columnname>GSID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>GeräteSensor</columnreftablename>
-				<columnrefcolumnname>GSID</columnrefcolumnname>
+				<columnreftablename>Geraet_Komponente</columnreftablename>
+				<columnrefcolumnname>GKID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
@@ -652,7 +616,7 @@
 		<tablexpos>1614</tablexpos>
 		<tableypos>741</tableypos>
 		<tablewidth>173</tablewidth>
-		<tableheight>201</tableheight>
+		<tableheight>204</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -787,71 +751,11 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Log_Zustand</tablename>
-		<tablexpos>254</tablexpos>
-		<tableypos>510</tableypos>
-		<tablewidth>135</tablewidth>
-		<tableheight>143</tableheight>
-		<weak>false</weak>
-		<columns>
-			<column>
-				<columnname>LSID</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>true</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>true</columnunique>
-			</column>
-			<column>
-				<columnname>Wert</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-			<column>
-				<columnname>Timestamp</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-			<column>
-				<columnname>GAID</columnname>
-				<columntype>serial</columntype>
-				<columncheck></columncheck>
-				<columnreftablename>GeräteAktor</columnreftablename>
-				<columnrefcolumnname>GAID</columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>true</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-		</columns>
-		<uniqueCombinations>
-		</uniqueCombinations>
-	</table>
-	<table>
 		<tablename>Log_Konnektor</tablename>
 		<tablexpos>1243</tablexpos>
 		<tableypos>133</tableypos>
 		<tablewidth>163</tablewidth>
-		<tableheight>116</tableheight>
+		<tableheight>118</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -907,15 +811,15 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>GeräteSensor</tablename>
+		<tablename>Geraet_Komponente</tablename>
 		<tablexpos>516</tablexpos>
-		<tableypos>250</tableypos>
+		<tableypos>251</tableypos>
 		<tablewidth>114</tablewidth>
-		<tableheight>104</tableheight>
+		<tableheight>130</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>GSID</columnname>
+				<columnname>GKID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -930,8 +834,8 @@
 				<columnname>SID</columnname>
 				<columntype>integer</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Sensor</columnreftablename>
-				<columnrefcolumnname>SID</columnrefcolumnname>
+				<columnreftablename>Komponente</columnreftablename>
+				<columnrefcolumnname>KID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
@@ -950,52 +854,16 @@
 				<columnfk>true</columnfk>
 				<columnunique>false</columnunique>
 			</column>
-		</columns>
-		<uniqueCombinations>
-		</uniqueCombinations>
-	</table>
-	<table>
-		<tablename>GeräteAktor</tablename>
-		<tablexpos>609</tablexpos>
-		<tableypos>549</tableypos>
-		<tablewidth>116</tablewidth>
-		<tableheight>108</tableheight>
-		<weak>false</weak>
-		<columns>
 			<column>
-				<columnname>GAID</columnname>
-				<columntype>serial</columntype>
+				<columnname>Status</columnname>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
+				<columnnotnull>false</columnnotnull>
 				<columndefault></columndefault>
-				<columnpk>true</columnpk>
+				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
-				<columnunique>true</columnunique>
-			</column>
-			<column>
-				<columnname>GID</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename>Gerät</columnreftablename>
-				<columnrefcolumnname>GID</columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>true</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-			<column>
-				<columnname>AID</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename>Aktor</columnreftablename>
-				<columnrefcolumnname>AID</columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>true</columnfk>
 				<columnunique>false</columnunique>
 			</column>
 		</columns>
@@ -1007,7 +875,7 @@
 		<tablexpos>841</tablexpos>
 		<tableypos>45</tableypos>
 		<tablewidth>149</tablewidth>
-		<tableheight>126</tableheight>
+		<tableheight>130</tableheight>
 		<weak>true</weak>
 		<columns>
 			<column>
@@ -1050,7 +918,7 @@
 		<tablexpos>749</tablexpos>
 		<tableypos>719</tableypos>
 		<tablewidth>169</tablewidth>
-		<tableheight>201</tableheight>
+		<tableheight>204</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -1143,10 +1011,10 @@
 	</table>
 	<table>
 		<tablename>Log_Regel</tablename>
-		<tablexpos>958</tablexpos>
+		<tablexpos>960</tablexpos>
 		<tableypos>794</tableypos>
 		<tablewidth>173</tablewidth>
-		<tableheight>201</tableheight>
+		<tableheight>204</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -1190,11 +1058,11 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>History_Log_Messung</tablename>
-		<tablexpos>381</tablexpos>
-		<tableypos>381</tableypos>
-		<tablewidth>175</tablewidth>
-		<tableheight>131</tableheight>
+		<tablename>History_Log_Komponente</tablename>
+		<tablexpos>485</tablexpos>
+		<tableypos>514</tableypos>
+		<tablewidth>179</tablewidth>
+		<tableheight>133</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -1237,68 +1105,8 @@
 				<columnname>GSID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>GeräteSensor</columnreftablename>
-				<columnrefcolumnname>GSID</columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>true</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-		</columns>
-		<uniqueCombinations>
-		</uniqueCombinations>
-	</table>
-	<table>
-		<tablename>History_Log_Zustand</tablename>
-		<tablexpos>390</tablexpos>
-		<tableypos>665</tableypos>
-		<tablewidth>170</tablewidth>
-		<tableheight>129</tableheight>
-		<weak>false</weak>
-		<columns>
-			<column>
-				<columnname>HLSID</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>true</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>true</columnunique>
-			</column>
-			<column>
-				<columnname>Wert</columnname>
-				<columntype>integer</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-			<column>
-				<columnname>Timestamp</columnname>
-				<columntype>timestamp</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-			<column>
-				<columnname>GAIDX</columnname>
-				<columntype>serial</columntype>
-				<columncheck></columncheck>
-				<columnreftablename>GeräteAktor</columnreftablename>
-				<columnrefcolumnname>GAID</columnrefcolumnname>
+				<columnreftablename>Geraet_Komponente</columnreftablename>
+				<columnrefcolumnname>GKID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
@@ -1313,8 +1121,8 @@
 		<tablename>History_Log_Konnektor</tablename>
 		<tablexpos>1233</tablexpos>
 		<tableypos>248</tableypos>
-		<tablewidth>188</tablewidth>
-		<tableheight>123</tableheight>
+		<tablewidth>193</tablewidth>
+		<tableheight>124</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -1372,9 +1180,9 @@
 	<table>
 		<tablename>History_Log_Regel</tablename>
 		<tablexpos>524</tablexpos>
-		<tableypos>918</tableypos>
-		<tablewidth>170</tablewidth>
-		<tableheight>200</tableheight>
+		<tableypos>919</tableypos>
+		<tablewidth>173</tablewidth>
+		<tableheight>204</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
@@ -1415,6 +1223,61 @@
 			</column>
 		</columns>
 		<uniqueCombinations>
+		</uniqueCombinations>
+	</table>
+	<table>
+		<tablename>Geraet_Komponente_Geraet_Komponente</tablename>
+		<tablexpos>708</tablexpos>
+		<tableypos>438</tableypos>
+		<tablewidth>169</tablewidth>
+		<tableheight>200</tableheight>
+		<weak>true</weak>
+		<columns>
+			<column>
+				<columnname>GKID</columnname>
+				<columntype>serial</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>Geraet_Komponente</columnreftablename>
+				<columnrefcolumnname>GKID</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>true</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>GKIDX</columnname>
+				<columntype>serial</columntype>
+				<columncheck></columncheck>
+				<columnreftablename>Geraet_Komponente</columnreftablename>
+				<columnrefcolumnname>GKID</columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>true</columnpk>
+				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>timestap</columnname>
+				<columntype>timestamp</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+		</columns>
+		<uniqueCombinations>
+			<uniqueCombination>
+				<shortForm>null</shortForm>
+				<combiColumns>
+					<combiColumn>GKID</combiColumn>
+					<combiColumn>GKIDX</combiColumn>
+				</combiColumns>
+			</uniqueCombination>
 		</uniqueCombinations>
 	</table>
 </tables>
@@ -1519,8 +1382,8 @@
 		<relationstrong></relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>GeräteSensor</relationtablea>
-		<relationtableb>Sensor</relationtableb>
+		<relationtablea>Geraet_Komponente</relationtablea>
+		<relationtableb>Komponente</relationtableb>
 		<relationtypea>1</relationtypea>
 		<relationtypeb>0</relationtypeb>
 		<relationcarda>0</relationcarda>
@@ -1528,7 +1391,7 @@
 		<relationstrong></relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>GeräteSensor</relationtablea>
+		<relationtablea>Geraet_Komponente</relationtablea>
 		<relationtableb>Gerät</relationtableb>
 		<relationtypea>1</relationtypea>
 		<relationtypeb>0</relationtypeb>
@@ -1537,35 +1400,8 @@
 		<relationstrong></relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>GeräteSensor</relationtablea>
-		<relationtableb>Log_Messung</relationtableb>
-		<relationtypea>0</relationtypea>
-		<relationtypeb>1</relationtypeb>
-		<relationcarda>1</relationcarda>
-		<relationcardb>0</relationcardb>
-		<relationstrong></relationstrong>
-	</relation>
-	<relation>
-		<relationtablea>GeräteAktor</relationtablea>
-		<relationtableb>Gerät</relationtableb>
-		<relationtypea>1</relationtypea>
-		<relationtypeb>0</relationtypeb>
-		<relationcarda>0</relationcarda>
-		<relationcardb>1</relationcardb>
-		<relationstrong></relationstrong>
-	</relation>
-	<relation>
-		<relationtablea>GeräteAktor</relationtablea>
-		<relationtableb>Aktor</relationtableb>
-		<relationtypea>1</relationtypea>
-		<relationtypeb>0</relationtypeb>
-		<relationcarda>0</relationcarda>
-		<relationcardb>1</relationcardb>
-		<relationstrong></relationstrong>
-	</relation>
-	<relation>
-		<relationtablea>GeräteAktor</relationtablea>
-		<relationtableb>Log_Zustand</relationtableb>
+		<relationtablea>Geraet_Komponente</relationtablea>
+		<relationtableb>Log_Komponente</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
@@ -1591,29 +1427,11 @@
 		<relationstrong>Gerät</relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Sensor</relationtablea>
+		<relationtablea>Komponente</relationtablea>
 		<relationtableb>Einheit</relationtableb>
 		<relationtypea>1</relationtypea>
 		<relationtypeb>0</relationtypeb>
 		<relationcarda>0</relationcarda>
-		<relationcardb>1</relationcardb>
-		<relationstrong></relationstrong>
-	</relation>
-	<relation>
-		<relationtablea>Einheit</relationtablea>
-		<relationtableb>Aktor</relationtableb>
-		<relationtypea>0</relationtypea>
-		<relationtypeb>1</relationtypeb>
-		<relationcarda>1</relationcarda>
-		<relationcardb>0</relationcardb>
-		<relationstrong></relationstrong>
-	</relation>
-	<relation>
-		<relationtablea>Zone</relationtablea>
-		<relationtableb>Zone</relationtableb>
-		<relationtypea>0</relationtypea>
-		<relationtypeb>0</relationtypeb>
-		<relationcarda>1</relationcarda>
 		<relationcardb>1</relationcardb>
 		<relationstrong></relationstrong>
 	</relation>
@@ -1627,17 +1445,8 @@
 		<relationstrong></relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>GeräteSensor</relationtablea>
-		<relationtableb>History_Log_Messung</relationtableb>
-		<relationtypea>0</relationtypea>
-		<relationtypeb>1</relationtypeb>
-		<relationcarda>1</relationcarda>
-		<relationcardb>0</relationcardb>
-		<relationstrong></relationstrong>
-	</relation>
-	<relation>
-		<relationtablea>GeräteAktor</relationtablea>
-		<relationtableb>History_Log_Zustand</relationtableb>
+		<relationtablea>Geraet_Komponente</relationtablea>
+		<relationtableb>History_Log_Komponente</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
@@ -1662,12 +1471,39 @@
 		<relationcardb>1</relationcardb>
 		<relationstrong></relationstrong>
 	</relation>
+	<relation>
+		<relationtablea>Zone</relationtablea>
+		<relationtableb>Zone</relationtableb>
+		<relationtypea>1</relationtypea>
+		<relationtypeb>1</relationtypeb>
+		<relationcarda>1</relationcarda>
+		<relationcardb>1</relationcardb>
+		<relationstrong></relationstrong>
+	</relation>
+	<relation>
+		<relationtablea>Geraet_Komponente</relationtablea>
+		<relationtableb>Geraet_Komponente_Geraet_Komponente</relationtableb>
+		<relationtypea>0</relationtypea>
+		<relationtypeb>1</relationtypeb>
+		<relationcarda>1</relationcarda>
+		<relationcardb>0</relationcardb>
+		<relationstrong>Geraet_Komponente</relationstrong>
+	</relation>
+	<relation>
+		<relationtablea>Geraet_Komponente</relationtablea>
+		<relationtableb>Geraet_Komponente_Geraet_Komponente</relationtableb>
+		<relationtypea>0</relationtypea>
+		<relationtypeb>1</relationtypeb>
+		<relationcarda>1</relationcarda>
+		<relationcardb>0</relationcardb>
+		<relationstrong>Geraet_Komponente</relationstrong>
+	</relation>
 </relations>
 <comments>
 	<comment>
-		<commentxpos>1764</commentxpos>
+		<commentxpos>1766</commentxpos>
 		<commentypos>468</commentypos>
-		<commentwidth>176</commentwidth>
+		<commentwidth>179</commentwidth>
 		<commentheight>158</commentheight>
 		<commenttext>Zusammenfassung mehrerer Räume unter einem Namen z.B. Etage</commenttext>
 		<commentbackground>-14336</commentbackground>
@@ -1694,8 +1530,8 @@
 	</comment>
 	<comment>
 		<commentxpos>954</commentxpos>
-		<commentypos>360</commentypos>
-		<commentwidth>154</commentwidth>
+		<commentypos>361</commentypos>
+		<commentwidth>155</commentwidth>
 		<commentheight>110</commentheight>
 		<commenttext>Ein Gerät kann mehrere Verbraucher, Sensoren und Aktoren haben</commenttext>
 		<commentbackground>-14336</commentbackground>
@@ -1708,8 +1544,8 @@
 	</comment>
 	<comment>
 		<commentxpos>443</commentxpos>
-		<commentypos>104</commentypos>
-		<commentwidth>176</commentwidth>
+		<commentypos>106</commentypos>
+		<commentwidth>179</commentwidth>
 		<commentheight>108</commentheight>
 		<commenttext>Ein Service ist ein Dienst, den das Gerät anbietet z.B. Licht an/aus</commenttext>
 		<commentbackground>-14336</commentbackground>
@@ -1721,7 +1557,7 @@
 		<commentforeground>-16777216</commentforeground>
 	</comment>
 	<comment>
-		<commentxpos>1154</commentxpos>
+		<commentxpos>1155</commentxpos>
 		<commentypos>554</commentypos>
 		<commentwidth>174</commentwidth>
 		<commentheight>85</commentheight>
@@ -1735,21 +1571,7 @@
 		<commentforeground>-16777216</commentforeground>
 	</comment>
 	<comment>
-		<commentxpos>121</commentxpos>
-		<commentypos>663</commentypos>
-		<commentwidth>195</commentwidth>
-		<commentheight>214</commentheight>
-		<commenttext>Macht es nach dem aktuellen Stand echt sinn Sensor und Aktor zu trennen? Die Sensor und Aktor Tabellen sind gleich, die GerätSensor und GerätAktor Tabellen sind gleich, Die Log Tabellen sind gleich. Ein Boolscher wert IsSensor würde 3 Tabellen ersetzen</commenttext>
-		<commentbackground>-14336</commentbackground>
-		<commentfont>
-			<name>Dialog</name>
-			<style>1</style>
-			<size>13</size>
-		</commentfont>
-		<commentforeground>-15066598</commentforeground>
-	</comment>
-	<comment>
-		<commentxpos>763</commentxpos>
+		<commentxpos>764</commentxpos>
 		<commentypos>924</commentypos>
 		<commentwidth>193</commentwidth>
 		<commentheight>99</commentheight>
