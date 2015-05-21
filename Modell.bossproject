@@ -38,7 +38,7 @@
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
+				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
@@ -110,7 +110,7 @@
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
+				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
@@ -122,7 +122,7 @@
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
+				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
@@ -162,7 +162,7 @@
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
-				<columnunique>true</columnunique>
+				<columnunique>false</columnunique>
 			</column>
 			<column>
 				<columnname>ObZoID</columnname>
@@ -178,6 +178,13 @@
 			</column>
 		</columns>
 		<uniqueCombinations>
+			<uniqueCombination>
+				<shortForm>Na_ObZoID</shortForm>
+				<combiColumns>
+					<combiColumn>Name</combiColumn>
+					<combiColumn>ObZoID</combiColumn>
+				</combiColumns>
+			</uniqueCombination>
 		</uniqueCombinations>
 	</table>
 	<table>
@@ -202,7 +209,7 @@
 			</column>
 			<column>
 				<columnname>Bezeichnung</columnname>
-				<columntype>varchar(25)</columntype>
+				<columntype>varchar(125)</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -250,7 +257,7 @@
 			</column>
 			<column>
 				<columnname>Name</columnname>
-				<columntype>varchar(25)</columntype>
+				<columntype>varchar(125)</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -273,7 +280,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>Typ</columnname>
+				<columnname>Sensor</columnname>
 				<columntype>boolean</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -333,8 +340,8 @@
 				<columnunique>true</columnunique>
 			</column>
 			<column>
-				<columnname>Einheit</columnname>
-				<columntype>smallint</columntype>
+				<columnname>Einheit-Symbol</columnname>
+				<columntype>varchar(25)</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -393,7 +400,7 @@
 		<weak>true</weak>
 		<columns>
 			<column>
-				<columnname>ID_Gerät</columnname>
+				<columnname>GeID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Gerät</columnreftablename>
@@ -405,7 +412,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>ID_Nutzer</columnname>
+				<columnname>GrID</columnname>
 				<columntype>smallint</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Gruppe</columnreftablename>
@@ -418,13 +425,13 @@
 			</column>
 			<column>
 				<columnname>Rechte</columnname>
-				<columntype>integer</columntype>
+				<columntype>smallint</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
-				<columnpk>true</columnpk>
+				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
 				<columnunique>false</columnunique>
 			</column>
@@ -433,9 +440,8 @@
 			<uniqueCombination>
 				<shortForm>null</shortForm>
 				<combiColumns>
-					<combiColumn>ID_Gerät</combiColumn>
-					<combiColumn>ID_Nutzer</combiColumn>
-					<combiColumn>Rechte</combiColumn>
+					<combiColumn>GeID</combiColumn>
+					<combiColumn>GrID</combiColumn>
 				</combiColumns>
 			</uniqueCombination>
 		</uniqueCombinations>
@@ -466,7 +472,7 @@
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
+				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
@@ -474,11 +480,11 @@
 			</column>
 			<column>
 				<columnname>Timestamp</columnname>
-				<columntype>integer</columntype>
+				<columntype>timestamp</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
+				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
@@ -522,7 +528,7 @@
 			</column>
 			<column>
 				<columnname>Name</columnname>
-				<columntype>varchar(25)</columntype>
+				<columntype>varchar(125)</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -534,11 +540,11 @@
 			</column>
 			<column>
 				<columnname>Vorname</columnname>
-				<columntype>varchar(25)</columntype>
+				<columntype>varchar(125)</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
+				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
@@ -546,7 +552,7 @@
 			</column>
 			<column>
 				<columnname>Passwort</columnname>
-				<columntype>varchar(25)</columntype>
+				<columntype>varchar(125)</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -571,6 +577,30 @@
 			<column>
 				<columnname>Geburtsdatum</columnname>
 				<columntype>date</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>Benutzername</columnname>
+				<columntype>varchar(125)</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>true</columnunique>
+			</column>
+			<column>
+				<columnname>Email</columnname>
+				<columntype>varchar(125)</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -689,7 +719,7 @@
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
+				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
@@ -804,15 +834,15 @@
 	</table>
 	<table>
 		<tablename>Regel</tablename>
-		<tablexpos>521</tablexpos>
-		<tableypos>721</tableypos>
+		<tablexpos>524</tablexpos>
+		<tableypos>724</tableypos>
 		<tablewidth>169</tablewidth>
 		<tableheight>204</tableheight>
 		<weak>false</weak>
 		<columns>
 			<column>
 				<columnname>ReID</columnname>
-				<columntype>xml</columntype>
+				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -901,7 +931,7 @@
 	<table>
 		<tablename>Log_Regel</tablename>
 		<tablexpos>826</tablexpos>
-		<tableypos>752</tableypos>
+		<tableypos>755</tableypos>
 		<tablewidth>173</tablewidth>
 		<tableheight>204</tableheight>
 		<weak>false</weak>
@@ -924,7 +954,7 @@
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
+				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
@@ -932,7 +962,7 @@
 			</column>
 			<column>
 				<columnname>ReID</columnname>
-				<columntype>xml</columntype>
+				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Regel</columnreftablename>
 				<columnrefcolumnname>ReID</columnrefcolumnname>
@@ -972,7 +1002,7 @@
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
+				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
@@ -984,7 +1014,7 @@
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
+				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
@@ -1032,7 +1062,7 @@
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
+				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
@@ -1044,7 +1074,7 @@
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
+				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
@@ -1069,7 +1099,7 @@
 	<table>
 		<tablename>History_Log_Regel</tablename>
 		<tablexpos>205</tablexpos>
-		<tableypos>721</tableypos>
+		<tableypos>724</tableypos>
 		<tablewidth>173</tablewidth>
 		<tableheight>204</tableheight>
 		<weak>false</weak>
@@ -1092,7 +1122,7 @@
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
+				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
@@ -1100,7 +1130,7 @@
 			</column>
 			<column>
 				<columnname>ReID</columnname>
-				<columntype>xml</columntype>
+				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Regel</columnreftablename>
 				<columnrefcolumnname>ReID</columnrefcolumnname>
@@ -1152,7 +1182,7 @@
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
+				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
 				<columnfk>false</columnfk>
@@ -1172,7 +1202,7 @@
 	<table>
 		<tablename>Gruppe_Zone</tablename>
 		<tablexpos>1150</tablexpos>
-		<tableypos>392</tableypos>
+		<tableypos>393</tableypos>
 		<tablewidth>173</tablewidth>
 		<tableheight>135</tableheight>
 		<weak>true</weak>
@@ -1199,6 +1229,18 @@
 				<columndefault></columndefault>
 				<columnpk>true</columnpk>
 				<columnfk>true</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>Rechte</columnname>
+				<columntype>smallint</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
 				<columnunique>false</columnunique>
 			</column>
 		</columns>
@@ -1419,7 +1461,7 @@
 		<commentypos>430</commentypos>
 		<commentwidth>179</commentwidth>
 		<commentheight>158</commentheight>
-		<commenttext>Zusammenfassung mehrerer Räume unter einem Namen z.B. Etage</commenttext>
+		<commenttext>Zusammenfassung mehrerer Zone unter einer OberZone z.B. Räume zur einer Etage</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
 			<name>Dialog</name>
@@ -1443,28 +1485,14 @@
 		<commentforeground>-16777216</commentforeground>
 	</comment>
 	<comment>
-		<commentxpos>1249</commentxpos>
-		<commentypos>594</commentypos>
+		<commentxpos>1259</commentxpos>
+		<commentypos>538</commentypos>
 		<commentwidth>174</commentwidth>
-		<commentheight>85</commentheight>
-		<commenttext>Rechteverwaltung pro Raum und Gerät durch Gruppen</commenttext>
+		<commentheight>173</commentheight>
+		<commenttext>Rechteverwaltung pro Zone und Gerät durch Gruppen. Rechte werden wie bei Linux gespeichert, daher wird nur einTrag pro Gruppe-Zone benötigit.</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
 			<name>Dialog</name>
-			<style>1</style>
-			<size>13</size>
-		</commentfont>
-		<commentforeground>-16777216</commentforeground>
-	</comment>
-	<comment>
-		<commentxpos>45</commentxpos>
-		<commentypos>564</commentypos>
-		<commentwidth>124</commentwidth>
-		<commentheight>94</commentheight>
-		<commenttext>Einheit als Unicode-Wert speichern?</commenttext>
-		<commentbackground>-14336</commentbackground>
-		<commentfont>
-			<name>Helvetica-Bold</name>
 			<style>1</style>
 			<size>13</size>
 		</commentfont>
