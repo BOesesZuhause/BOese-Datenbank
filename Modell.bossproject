@@ -219,18 +219,6 @@
 				<columnfk>false</columnfk>
 				<columnunique>true</columnunique>
 			</column>
-			<column>
-				<columnname>Typ</columnname>
-				<columntype>smallint</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>false</columnunique>
-			</column>
 		</columns>
 		<uniqueCombinations>
 		</uniqueCombinations>
@@ -314,18 +302,6 @@
 				<columnpk>true</columnpk>
 				<columnfk>false</columnfk>
 				<columnunique>true</columnunique>
-			</column>
-			<column>
-				<columnname>Wert</columnname>
-				<columntype>numeric</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>false</columnunique>
 			</column>
 			<column>
 				<columnname>Name</columnname>
@@ -776,6 +752,18 @@
 			<column>
 				<columnname>Status</columnname>
 				<columntype>smallint</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>false</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
+			<column>
+				<columnname>Bezeichnung</columnname>
+				<columntype>varchar</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -1472,10 +1460,10 @@
 	</comment>
 	<comment>
 		<commentxpos>443</commentxpos>
-		<commentypos>106</commentypos>
+		<commentypos>45</commentypos>
 		<commentwidth>179</commentwidth>
-		<commentheight>108</commentheight>
-		<commenttext>Ein Service ist ein Dienst, den das Gerät anbietet z.B. Licht an/aus</commenttext>
+		<commentheight>169</commentheight>
+		<commenttext>Ein Service ist ein Dienst, den das Gerät anbietet z.B. Licht Dadurch können mehrere Geräte gleichzeitig geschaltet werden (Zone und Zonen übergreifend)</commenttext>
 		<commentbackground>-14336</commentbackground>
 		<commentfont>
 			<name>Dialog</name>
@@ -1485,7 +1473,7 @@
 		<commentforeground>-16777216</commentforeground>
 	</comment>
 	<comment>
-		<commentxpos>1259</commentxpos>
+		<commentxpos>1260</commentxpos>
 		<commentypos>538</commentypos>
 		<commentwidth>174</commentwidth>
 		<commentheight>173</commentheight>
