@@ -1,7 +1,7 @@
 <projectname>Modell</projectname>
 <tables>
 	<table>
-		<tablename>Gerät</tablename>
+		<tablename>Device</tablename>
 		<tablexpos>856</tablexpos>
 		<tableypos>231</tableypos>
 		<tablewidth>110</tablewidth>
@@ -9,7 +9,7 @@
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>GeID</columnname>
+				<columnname>DeID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -33,7 +33,7 @@
 				<columnunique>true</columnunique>
 			</column>
 			<column>
-				<columnname>Seriennummer</columnname>
+				<columnname>SerialNumber</columnname>
 				<columntype>varchar(125)</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -45,7 +45,7 @@
 				<columnunique>true</columnunique>
 			</column>
 			<column>
-				<columnname>Kaufdatum</columnname>
+				<columnname>PurchaseDate</columnname>
 				<columntype>date</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -57,11 +57,11 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>ID_Konnektor</columnname>
+				<columnname>CoID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Konnektor</columnreftablename>
-				<columnrefcolumnname>KoID</columnrefcolumnname>
+				<columnreftablename>Connector</columnreftablename>
+				<columnrefcolumnname>CoID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
@@ -85,7 +85,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Konnektor</tablename>
+		<tablename>Connector</tablename>
 		<tablexpos>1025</tablexpos>
 		<tableypos>163</tableypos>
 		<tablewidth>106</tablewidth>
@@ -93,7 +93,7 @@
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>KoID</columnname>
+				<columnname>CoID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -117,7 +117,7 @@
 				<columnunique>true</columnunique>
 			</column>
 			<column>
-				<columnname>Webadresse</columnname>
+				<columnname>Webadress</columnname>
 				<columntype>varchar(125)</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -165,7 +165,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>ObZoID</columnname>
+				<columnname>SuZoID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Zone</columnreftablename>
@@ -182,7 +182,7 @@
 				<shortForm>Na_ObZoID</shortForm>
 				<combiColumns>
 					<combiColumn>Name</combiColumn>
-					<combiColumn>ObZoID</combiColumn>
+					<combiColumn>SuZoID</combiColumn>
 				</combiColumns>
 			</uniqueCombination>
 		</uniqueCombinations>
@@ -208,7 +208,7 @@
 				<columnunique>true</columnunique>
 			</column>
 			<column>
-				<columnname>Bezeichnung</columnname>
+				<columnname>Description</columnname>
 				<columntype>varchar(125)</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -224,7 +224,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Komponente</tablename>
+		<tablename>Component</tablename>
 		<tablexpos>69</tablexpos>
 		<tableypos>231</tableypos>
 		<tablewidth>80</tablewidth>
@@ -232,7 +232,7 @@
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>KoID</columnname>
+				<columnname>CoID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -256,11 +256,11 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>EiID</columnname>
+				<columnname>UnID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Einheit</columnreftablename>
-				<columnrefcolumnname>EiID</columnrefcolumnname>
+				<columnreftablename>Unit</columnreftablename>
+				<columnrefcolumnname>UnID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
@@ -284,7 +284,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Einheit</tablename>
+		<tablename>Unit</tablename>
 		<tablexpos>80</tablexpos>
 		<tableypos>423</tableypos>
 		<tablewidth>94</tablewidth>
@@ -292,7 +292,7 @@
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>EiID</columnname>
+				<columnname>UnID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -316,7 +316,7 @@
 				<columnunique>true</columnunique>
 			</column>
 			<column>
-				<columnname>Einheit-Symbol</columnname>
+				<columnname>Symbol</columnname>
 				<columntype>varchar(25)</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -332,7 +332,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Gruppe</tablename>
+		<tablename>Group</tablename>
 		<tablexpos>1143</tablexpos>
 		<tableypos>685</tableypos>
 		<tablewidth>110</tablewidth>
@@ -368,7 +368,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Gerät_Gruppe</tablename>
+		<tablename>DeviceGroup</tablename>
 		<tablexpos>930</tablexpos>
 		<tableypos>533</tableypos>
 		<tablewidth>155</tablewidth>
@@ -376,11 +376,11 @@
 		<weak>true</weak>
 		<columns>
 			<column>
-				<columnname>GeID</columnname>
+				<columnname>DeID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Gerät</columnreftablename>
-				<columnrefcolumnname>GeID</columnrefcolumnname>
+				<columnreftablename>Device</columnreftablename>
+				<columnrefcolumnname>DeID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>true</columnpk>
@@ -391,7 +391,7 @@
 				<columnname>GrID</columnname>
 				<columntype>smallint</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Gruppe</columnreftablename>
+				<columnreftablename>Group</columnreftablename>
 				<columnrefcolumnname>GrID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
@@ -400,7 +400,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>Rechte</columnname>
+				<columnname>Rights</columnname>
 				<columntype>smallint</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -416,14 +416,14 @@
 			<uniqueCombination>
 				<shortForm>null</shortForm>
 				<combiColumns>
-					<combiColumn>GeID</combiColumn>
+					<combiColumn>DeID</combiColumn>
 					<combiColumn>GrID</combiColumn>
 				</combiColumns>
 			</uniqueCombination>
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Log_Komponente</tablename>
+		<tablename>LogComponent</tablename>
 		<tablexpos>220</tablexpos>
 		<tableypos>354</tableypos>
 		<tablewidth>118</tablewidth>
@@ -431,7 +431,7 @@
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>LoKoID</columnname>
+				<columnname>LoCoID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -443,7 +443,7 @@
 				<columnunique>true</columnunique>
 			</column>
 			<column>
-				<columnname>Wert</columnname>
+				<columnname>Value</columnname>
 				<columntype>numeric</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -467,11 +467,11 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>GeKoID</columnname>
+				<columnname>DeCoID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Geraet_Komponente</columnreftablename>
-				<columnrefcolumnname>GeKoID</columnrefcolumnname>
+				<columnreftablename>DeviceComponent</columnreftablename>
+				<columnrefcolumnname>DeCoID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
@@ -483,7 +483,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Nutzer</tablename>
+		<tablename>User</tablename>
 		<tablexpos>1614</tablexpos>
 		<tableypos>741</tableypos>
 		<tablewidth>173</tablewidth>
@@ -491,7 +491,7 @@
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>NuID</columnname>
+				<columnname>UsID</columnname>
 				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -503,7 +503,7 @@
 				<columnunique>true</columnunique>
 			</column>
 			<column>
-				<columnname>Name</columnname>
+				<columnname>Surname</columnname>
 				<columntype>varchar(125)</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -515,7 +515,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>Vorname</columnname>
+				<columnname>FirstName</columnname>
 				<columntype>varchar(125)</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -527,7 +527,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>Passwort</columnname>
+				<columnname>Password</columnname>
 				<columntype>varchar(125)</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -539,7 +539,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>Geschlecht</columnname>
+				<columnname>Gender</columnname>
 				<columntype>boolean</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -551,7 +551,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>Geburtsdatum</columnname>
+				<columnname>Birthdate</columnname>
 				<columntype>date</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -563,7 +563,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>Benutzername</columnname>
+				<columnname>UserName</columnname>
 				<columntype>varchar(125)</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -591,7 +591,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Gruppe_Nutzer</tablename>
+		<tablename>GroupUser</tablename>
 		<tablexpos>1356</tablexpos>
 		<tableypos>758</tableypos>
 		<tablewidth>173</tablewidth>
@@ -602,7 +602,7 @@
 				<columnname>GrID</columnname>
 				<columntype>smallint</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Gruppe</columnreftablename>
+				<columnreftablename>Group</columnreftablename>
 				<columnrefcolumnname>GrID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
@@ -611,11 +611,11 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>NuID</columnname>
+				<columnname>UsID</columnname>
 				<columntype>integer</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Nutzer</columnreftablename>
-				<columnrefcolumnname>NuID</columnrefcolumnname>
+				<columnreftablename>User</columnreftablename>
+				<columnrefcolumnname>UsID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>true</columnpk>
@@ -640,13 +640,13 @@
 				<shortForm>null</shortForm>
 				<combiColumns>
 					<combiColumn>GrID</combiColumn>
-					<combiColumn>NuID</combiColumn>
+					<combiColumn>UsID</combiColumn>
 				</combiColumns>
 			</uniqueCombination>
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Log_Konnektor</tablename>
+		<tablename>LogConnector</tablename>
 		<tablexpos>1218</tablexpos>
 		<tableypos>36</tableypos>
 		<tablewidth>163</tablewidth>
@@ -654,7 +654,7 @@
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>LoKoID</columnname>
+				<columnname>LoCoID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -666,11 +666,11 @@
 				<columnunique>true</columnunique>
 			</column>
 			<column>
-				<columnname>KoID</columnname>
+				<columnname>CoID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Konnektor</columnreftablename>
-				<columnrefcolumnname>KoID</columnrefcolumnname>
+				<columnreftablename>Connector</columnreftablename>
+				<columnrefcolumnname>CoID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
@@ -690,7 +690,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>Daten</columnname>
+				<columnname>Data</columnname>
 				<columntype>xml</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -706,7 +706,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Geraet_Komponente</tablename>
+		<tablename>DeviceComponent</tablename>
 		<tablexpos>516</tablexpos>
 		<tableypos>251</tableypos>
 		<tablewidth>114</tablewidth>
@@ -714,7 +714,7 @@
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>GeKoID</columnname>
+				<columnname>DeCoID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -729,8 +729,8 @@
 				<columnname>SeID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Komponente</columnreftablename>
-				<columnrefcolumnname>KoID</columnrefcolumnname>
+				<columnreftablename>Component</columnreftablename>
+				<columnrefcolumnname>CoID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
@@ -741,8 +741,8 @@
 				<columnname>GeID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Gerät</columnreftablename>
-				<columnrefcolumnname>GeID</columnrefcolumnname>
+				<columnreftablename>Device</columnreftablename>
+				<columnrefcolumnname>DeID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
@@ -762,7 +762,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>Bezeichnung</columnname>
+				<columnname>Description</columnname>
 				<columntype>varchar</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -774,7 +774,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>Logregel</columnname>
+				<columnname>LogRule</columnname>
 				<columntype>numeric</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -786,7 +786,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>AktuellerWert</columnname>
+				<columnname>CurrentValue</columnname>
 				<columntype>numeric</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -802,7 +802,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Service_Gerät</tablename>
+		<tablename>ServiceDevice</tablename>
 		<tablexpos>841</tablexpos>
 		<tableypos>45</tableypos>
 		<tablewidth>149</tablewidth>
@@ -822,11 +822,11 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>GeID</columnname>
+				<columnname>DeID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Gerät</columnreftablename>
-				<columnrefcolumnname>GeID</columnrefcolumnname>
+				<columnreftablename>Device</columnreftablename>
+				<columnrefcolumnname>DeID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>true</columnpk>
@@ -839,13 +839,13 @@
 				<shortForm>null</shortForm>
 				<combiColumns>
 					<combiColumn>SeID</combiColumn>
-					<combiColumn>GeID</combiColumn>
+					<combiColumn>DeID</combiColumn>
 				</combiColumns>
 			</uniqueCombination>
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Regel</tablename>
+		<tablename>Rule</tablename>
 		<tablexpos>524</tablexpos>
 		<tableypos>724</tableypos>
 		<tablewidth>169</tablewidth>
@@ -853,7 +853,7 @@
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>ReID</columnname>
+				<columnname>RuID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -941,7 +941,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Log_Regel</tablename>
+		<tablename>LogRule</tablename>
 		<tablexpos>826</tablexpos>
 		<tableypos>755</tableypos>
 		<tablewidth>173</tablewidth>
@@ -949,7 +949,7 @@
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>LoReID</columnname>
+				<columnname>LoRuID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -973,11 +973,11 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>ReID</columnname>
+				<columnname>RuID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Regel</columnreftablename>
-				<columnrefcolumnname>ReID</columnrefcolumnname>
+				<columnreftablename>Rule</columnreftablename>
+				<columnrefcolumnname>RuID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
@@ -989,7 +989,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>History_Log_Komponente</tablename>
+		<tablename>HistoryLogComponente</tablename>
 		<tablexpos>485</tablexpos>
 		<tableypos>514</tableypos>
 		<tablewidth>179</tablewidth>
@@ -997,7 +997,7 @@
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>HiLoKoID</columnname>
+				<columnname>HiLoCoID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -1009,7 +1009,7 @@
 				<columnunique>true</columnunique>
 			</column>
 			<column>
-				<columnname>Wert</columnname>
+				<columnname>Value</columnname>
 				<columntype>numeric</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -1033,11 +1033,11 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>GeKoID</columnname>
+				<columnname>DeCoID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Geraet_Komponente</columnreftablename>
-				<columnrefcolumnname>GeKoID</columnrefcolumnname>
+				<columnreftablename>DeviceComponent</columnreftablename>
+				<columnrefcolumnname>DeCoID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
@@ -1049,7 +1049,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>History_Log_Konnektor</tablename>
+		<tablename>HistoryLogConnector</tablename>
 		<tablexpos>1224</tablexpos>
 		<tableypos>185</tableypos>
 		<tablewidth>193</tablewidth>
@@ -1057,7 +1057,7 @@
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>HiLoKoID</columnname>
+				<columnname>HiLoCoID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -1081,7 +1081,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>Daten</columnname>
+				<columnname>Data</columnname>
 				<columntype>xml</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -1093,11 +1093,11 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>KoID</columnname>
+				<columnname>CoID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Konnektor</columnreftablename>
-				<columnrefcolumnname>KoID</columnrefcolumnname>
+				<columnreftablename>Connector</columnreftablename>
+				<columnrefcolumnname>CoID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
@@ -1109,7 +1109,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>History_Log_Regel</tablename>
+		<tablename>HistoryLogRule</tablename>
 		<tablexpos>205</tablexpos>
 		<tableypos>724</tableypos>
 		<tablewidth>173</tablewidth>
@@ -1117,7 +1117,7 @@
 		<weak>false</weak>
 		<columns>
 			<column>
-				<columnname>HiLoReID</columnname>
+				<columnname>HiLoRuID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -1141,11 +1141,11 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>ReID</columnname>
+				<columnname>RuID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Regel</columnreftablename>
-				<columnrefcolumnname>ReID</columnrefcolumnname>
+				<columnreftablename>Rule</columnreftablename>
+				<columnrefcolumnname>RuID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>false</columnpk>
@@ -1157,7 +1157,7 @@
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Geraet_Komponente_Ersetzen</tablename>
+		<tablename>DeviceComponenteReplace</tablename>
 		<tablexpos>710</tablexpos>
 		<tableypos>438</tableypos>
 		<tablewidth>169</tablewidth>
@@ -1165,11 +1165,11 @@
 		<weak>true</weak>
 		<columns>
 			<column>
-				<columnname>GeKoID</columnname>
+				<columnname>DeCoID</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Geraet_Komponente</columnreftablename>
-				<columnrefcolumnname>GeKoID</columnrefcolumnname>
+				<columnreftablename>DeviceComponent</columnreftablename>
+				<columnrefcolumnname>DeCoID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>true</columnpk>
@@ -1177,11 +1177,11 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>GeKoID_Ersetzt</columnname>
+				<columnname>DeCoIDReplaced</columnname>
 				<columntype>serial</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Geraet_Komponente</columnreftablename>
-				<columnrefcolumnname>GeKoID</columnrefcolumnname>
+				<columnreftablename>DeviceComponent</columnreftablename>
+				<columnrefcolumnname>DeCoID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
 				<columnpk>true</columnpk>
@@ -1205,14 +1205,14 @@
 			<uniqueCombination>
 				<shortForm>null</shortForm>
 				<combiColumns>
-					<combiColumn>GeKoID</combiColumn>
-					<combiColumn>GeKoID_Ersetzt</combiColumn>
+					<combiColumn>DeCoID</combiColumn>
+					<combiColumn>DeCoIDReplaced</combiColumn>
 				</combiColumns>
 			</uniqueCombination>
 		</uniqueCombinations>
 	</table>
 	<table>
-		<tablename>Gruppe_Zone</tablename>
+		<tablename>GroupZone</tablename>
 		<tablexpos>1150</tablexpos>
 		<tableypos>393</tableypos>
 		<tablewidth>173</tablewidth>
@@ -1223,7 +1223,7 @@
 				<columnname>GrID</columnname>
 				<columntype>smallint</columntype>
 				<columncheck></columncheck>
-				<columnreftablename>Gruppe</columnreftablename>
+				<columnreftablename>Group</columnreftablename>
 				<columnrefcolumnname>GrID</columnrefcolumnname>
 				<columnnotnull>true</columnnotnull>
 				<columndefault></columndefault>
@@ -1244,7 +1244,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>Rechte</columnname>
+				<columnname>Rights</columnname>
 				<columntype>smallint</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -1269,8 +1269,8 @@
 </tables>
 <relations>
 	<relation>
-		<relationtablea>Gerät</relationtablea>
-		<relationtableb>Konnektor</relationtableb>
+		<relationtablea>Device</relationtablea>
+		<relationtableb>Connector</relationtableb>
 		<relationtypea>1</relationtypea>
 		<relationtypeb>0</relationtypeb>
 		<relationcarda>0</relationcarda>
@@ -1278,44 +1278,44 @@
 		<relationstrong></relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Gerät</relationtablea>
-		<relationtableb>Gerät_Gruppe</relationtableb>
+		<relationtablea>Device</relationtablea>
+		<relationtableb>DeviceGroup</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
 		<relationcardb>0</relationcardb>
-		<relationstrong>Gerät</relationstrong>
+		<relationstrong>Device</relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Gruppe</relationtablea>
-		<relationtableb>Gerät_Gruppe</relationtableb>
+		<relationtablea>Group</relationtablea>
+		<relationtableb>DeviceGroup</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
 		<relationcardb>0</relationcardb>
-		<relationstrong>Gruppe</relationstrong>
+		<relationstrong>Group</relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Gruppe</relationtablea>
-		<relationtableb>Gruppe_Nutzer</relationtableb>
+		<relationtablea>Group</relationtablea>
+		<relationtableb>GroupUser</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
 		<relationcardb>0</relationcardb>
-		<relationstrong>Gruppe</relationstrong>
+		<relationstrong>Group</relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Nutzer</relationtablea>
-		<relationtableb>Gruppe_Nutzer</relationtableb>
+		<relationtablea>User</relationtablea>
+		<relationtableb>GroupUser</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
 		<relationcardb>0</relationcardb>
-		<relationstrong>Nutzer</relationstrong>
+		<relationstrong>User</relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Log_Konnektor</relationtablea>
-		<relationtableb>Konnektor</relationtableb>
+		<relationtablea>LogConnector</relationtablea>
+		<relationtableb>Connector</relationtableb>
 		<relationtypea>1</relationtypea>
 		<relationtypeb>0</relationtypeb>
 		<relationcarda>0</relationcarda>
@@ -1323,8 +1323,8 @@
 		<relationstrong></relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Geraet_Komponente</relationtablea>
-		<relationtableb>Komponente</relationtableb>
+		<relationtablea>DeviceComponent</relationtablea>
+		<relationtableb>Component</relationtableb>
 		<relationtypea>1</relationtypea>
 		<relationtypeb>0</relationtypeb>
 		<relationcarda>0</relationcarda>
@@ -1332,8 +1332,8 @@
 		<relationstrong></relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Geraet_Komponente</relationtablea>
-		<relationtableb>Gerät</relationtableb>
+		<relationtablea>DeviceComponent</relationtablea>
+		<relationtableb>Device</relationtableb>
 		<relationtypea>1</relationtypea>
 		<relationtypeb>0</relationtypeb>
 		<relationcarda>0</relationcarda>
@@ -1341,8 +1341,8 @@
 		<relationstrong></relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Geraet_Komponente</relationtablea>
-		<relationtableb>Log_Komponente</relationtableb>
+		<relationtablea>DeviceComponent</relationtablea>
+		<relationtableb>LogComponent</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
@@ -1351,7 +1351,7 @@
 	</relation>
 	<relation>
 		<relationtablea>Service</relationtablea>
-		<relationtableb>Service_Gerät</relationtableb>
+		<relationtableb>ServiceDevice</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
@@ -1359,17 +1359,17 @@
 		<relationstrong>Service</relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Gerät</relationtablea>
-		<relationtableb>Service_Gerät</relationtableb>
+		<relationtablea>Device</relationtablea>
+		<relationtableb>ServiceDevice</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
 		<relationcardb>0</relationcardb>
-		<relationstrong>Gerät</relationstrong>
+		<relationstrong>Device</relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Komponente</relationtablea>
-		<relationtableb>Einheit</relationtableb>
+		<relationtablea>Component</relationtablea>
+		<relationtableb>Unit</relationtableb>
 		<relationtypea>1</relationtypea>
 		<relationtypeb>0</relationtypeb>
 		<relationcarda>0</relationcarda>
@@ -1377,8 +1377,8 @@
 		<relationstrong></relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Regel</relationtablea>
-		<relationtableb>Log_Regel</relationtableb>
+		<relationtablea>Rule</relationtablea>
+		<relationtableb>LogRule</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
@@ -1386,8 +1386,8 @@
 		<relationstrong></relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Geraet_Komponente</relationtablea>
-		<relationtableb>History_Log_Komponente</relationtableb>
+		<relationtablea>DeviceComponent</relationtablea>
+		<relationtableb>HistoryLogComponente</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
@@ -1395,8 +1395,8 @@
 		<relationstrong></relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>History_Log_Konnektor</relationtablea>
-		<relationtableb>Konnektor</relationtableb>
+		<relationtablea>HistoryLogConnector</relationtablea>
+		<relationtableb>Connector</relationtableb>
 		<relationtypea>1</relationtypea>
 		<relationtypeb>0</relationtypeb>
 		<relationcarda>0</relationcarda>
@@ -1404,8 +1404,8 @@
 		<relationstrong></relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>History_Log_Regel</relationtablea>
-		<relationtableb>Regel</relationtableb>
+		<relationtablea>HistoryLogRule</relationtablea>
+		<relationtableb>Rule</relationtableb>
 		<relationtypea>1</relationtypea>
 		<relationtypeb>0</relationtypeb>
 		<relationcarda>0</relationcarda>
@@ -1422,25 +1422,25 @@
 		<relationstrong></relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Geraet_Komponente</relationtablea>
-		<relationtableb>Geraet_Komponente_Ersetzen</relationtableb>
+		<relationtablea>DeviceComponent</relationtablea>
+		<relationtableb>DeviceComponenteReplace</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
 		<relationcardb>0</relationcardb>
-		<relationstrong>Geraet_Komponente</relationstrong>
+		<relationstrong>DeviceComponent</relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Geraet_Komponente</relationtablea>
-		<relationtableb>Geraet_Komponente_Ersetzen</relationtableb>
+		<relationtablea>DeviceComponent</relationtablea>
+		<relationtableb>DeviceComponenteReplace</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
 		<relationcardb>0</relationcardb>
-		<relationstrong>Geraet_Komponente</relationstrong>
+		<relationstrong>DeviceComponent</relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Gerät</relationtablea>
+		<relationtablea>Device</relationtablea>
 		<relationtableb>Zone</relationtableb>
 		<relationtypea>1</relationtypea>
 		<relationtypeb>0</relationtypeb>
@@ -1449,17 +1449,17 @@
 		<relationstrong></relationstrong>
 	</relation>
 	<relation>
-		<relationtablea>Gruppe</relationtablea>
-		<relationtableb>Gruppe_Zone</relationtableb>
+		<relationtablea>Group</relationtablea>
+		<relationtableb>GroupZone</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
 		<relationcardb>0</relationcardb>
-		<relationstrong>Gruppe</relationstrong>
+		<relationstrong>Group</relationstrong>
 	</relation>
 	<relation>
 		<relationtablea>Zone</relationtablea>
-		<relationtableb>Gruppe_Zone</relationtableb>
+		<relationtableb>GroupZone</relationtableb>
 		<relationtypea>0</relationtypea>
 		<relationtypeb>1</relationtypeb>
 		<relationcarda>1</relationcarda>
