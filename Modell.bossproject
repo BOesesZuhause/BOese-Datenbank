@@ -128,6 +128,18 @@
 				<columnfk>false</columnfk>
 				<columnunique>true</columnunique>
 			</column>
+			<column>
+				<columnname>Password</columnname>
+				<columntype>varchar(125)</columntype>
+				<columncheck></columncheck>
+				<columnreftablename></columnreftablename>
+				<columnrefcolumnname></columnrefcolumnname>
+				<columnnotnull>true</columnnotnull>
+				<columndefault></columndefault>
+				<columnpk>false</columnpk>
+				<columnfk>false</columnfk>
+				<columnunique>false</columnunique>
+			</column>
 		</columns>
 		<uniqueCombinations>
 		</uniqueCombinations>
