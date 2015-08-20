@@ -10,7 +10,7 @@
 		<columns>
 			<column>
 				<columnname>DeID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -58,7 +58,7 @@
 			</column>
 			<column>
 				<columnname>CoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Connector</columnreftablename>
 				<columnrefcolumnname>CoID</columnrefcolumnname>
@@ -70,7 +70,7 @@
 			</column>
 			<column>
 				<columnname>ZoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Zone</columnreftablename>
 				<columnrefcolumnname>ZoID</columnrefcolumnname>
@@ -94,7 +94,7 @@
 		<columns>
 			<column>
 				<columnname>CoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -117,19 +117,7 @@
 				<columnunique>true</columnunique>
 			</column>
 			<column>
-				<columnname>Webadress</columnname>
-				<columntype>varchar(125)</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>true</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>true</columnunique>
-			</column>
-			<column>
-				<columnname>Password</columnname>
+				<columnname>Secret</columnname>
 				<columntype>varchar(125)</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -154,7 +142,7 @@
 		<columns>
 			<column>
 				<columnname>ZoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -178,7 +166,7 @@
 			</column>
 			<column>
 				<columnname>SuZoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Zone</columnreftablename>
 				<columnrefcolumnname>ZoID</columnrefcolumnname>
@@ -209,7 +197,7 @@
 		<columns>
 			<column>
 				<columnname>SeID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -245,7 +233,7 @@
 		<columns>
 			<column>
 				<columnname>CoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -269,7 +257,7 @@
 			</column>
 			<column>
 				<columnname>UnID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Unit</columnreftablename>
 				<columnrefcolumnname>UnID</columnrefcolumnname>
@@ -305,7 +293,7 @@
 		<columns>
 			<column>
 				<columnname>UnID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -389,7 +377,7 @@
 		<columns>
 			<column>
 				<columnname>DeID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Device</columnreftablename>
 				<columnrefcolumnname>DeID</columnrefcolumnname>
@@ -444,7 +432,7 @@
 		<columns>
 			<column>
 				<columnname>LoCoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -480,7 +468,7 @@
 			</column>
 			<column>
 				<columnname>DeCoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>DeviceComponent</columnreftablename>
 				<columnrefcolumnname>DeCoID</columnrefcolumnname>
@@ -667,7 +655,7 @@
 		<columns>
 			<column>
 				<columnname>LoCoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -679,7 +667,7 @@
 			</column>
 			<column>
 				<columnname>CoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Connector</columnreftablename>
 				<columnrefcolumnname>CoID</columnrefcolumnname>
@@ -703,7 +691,7 @@
 			</column>
 			<column>
 				<columnname>Data</columnname>
-				<columntype>xml</columntype>
+				<columntype>bytea</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -727,7 +715,7 @@
 		<columns>
 			<column>
 				<columnname>DeCoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -739,7 +727,7 @@
 			</column>
 			<column>
 				<columnname>SeID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Component</columnreftablename>
 				<columnrefcolumnname>CoID</columnrefcolumnname>
@@ -751,7 +739,7 @@
 			</column>
 			<column>
 				<columnname>GeID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Device</columnreftablename>
 				<columnrefcolumnname>DeID</columnrefcolumnname>
@@ -823,7 +811,7 @@
 		<columns>
 			<column>
 				<columnname>SeID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Service</columnreftablename>
 				<columnrefcolumnname>SeID</columnrefcolumnname>
@@ -835,7 +823,7 @@
 			</column>
 			<column>
 				<columnname>DeID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Device</columnreftablename>
 				<columnrefcolumnname>DeID</columnrefcolumnname>
@@ -866,7 +854,7 @@
 		<columns>
 			<column>
 				<columnname>RuID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -914,7 +902,7 @@
 			</column>
 			<column>
 				<columnname>Permissions</columnname>
-				<columntype>xml</columntype>
+				<columntype>bytea</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -926,7 +914,7 @@
 			</column>
 			<column>
 				<columnname>Conditions</columnname>
-				<columntype>xml</columntype>
+				<columntype>bytea</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -938,7 +926,7 @@
 			</column>
 			<column>
 				<columnname>Actions</columnname>
-				<columntype>xml</columntype>
+				<columntype>bytea</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -962,7 +950,7 @@
 		<columns>
 			<column>
 				<columnname>LoRuID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -986,7 +974,7 @@
 			</column>
 			<column>
 				<columnname>RuID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Rule</columnreftablename>
 				<columnrefcolumnname>RuID</columnrefcolumnname>
@@ -1010,7 +998,7 @@
 		<columns>
 			<column>
 				<columnname>HiLoCoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -1046,7 +1034,7 @@
 			</column>
 			<column>
 				<columnname>DeCoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>DeviceComponent</columnreftablename>
 				<columnrefcolumnname>DeCoID</columnrefcolumnname>
@@ -1070,7 +1058,7 @@
 		<columns>
 			<column>
 				<columnname>HiLoCoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -1094,7 +1082,7 @@
 			</column>
 			<column>
 				<columnname>Data</columnname>
-				<columntype>xml</columntype>
+				<columntype>bytea</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -1106,7 +1094,7 @@
 			</column>
 			<column>
 				<columnname>CoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Connector</columnreftablename>
 				<columnrefcolumnname>CoID</columnrefcolumnname>
@@ -1130,7 +1118,7 @@
 		<columns>
 			<column>
 				<columnname>HiLoRuID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
 				<columnrefcolumnname></columnrefcolumnname>
@@ -1154,7 +1142,7 @@
 			</column>
 			<column>
 				<columnname>RuID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Rule</columnreftablename>
 				<columnrefcolumnname>RuID</columnrefcolumnname>
@@ -1178,7 +1166,7 @@
 		<columns>
 			<column>
 				<columnname>DeCoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>DeviceComponent</columnreftablename>
 				<columnrefcolumnname>DeCoID</columnrefcolumnname>
@@ -1190,7 +1178,7 @@
 			</column>
 			<column>
 				<columnname>DeCoIDReplaced</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>DeviceComponent</columnreftablename>
 				<columnrefcolumnname>DeCoID</columnrefcolumnname>
@@ -1245,7 +1233,7 @@
 			</column>
 			<column>
 				<columnname>ZoID</columnname>
-				<columntype>serial</columntype>
+				<columntype>integer</columntype>
 				<columncheck></columncheck>
 				<columnreftablename>Zone</columnreftablename>
 				<columnrefcolumnname>ZoID</columnrefcolumnname>
