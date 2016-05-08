@@ -774,18 +774,6 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>LogRule</columnname>
-				<columntype>numeric</columntype>
-				<columncheck></columncheck>
-				<columnreftablename></columnreftablename>
-				<columnrefcolumnname></columnrefcolumnname>
-				<columnnotnull>false</columnnotnull>
-				<columndefault></columndefault>
-				<columnpk>false</columnpk>
-				<columnfk>false</columnfk>
-				<columnunique>false</columnunique>
-			</column>
-			<column>
 				<columnname>CurrentValue</columnname>
 				<columntype>numeric</columntype>
 				<columncheck></columncheck>
