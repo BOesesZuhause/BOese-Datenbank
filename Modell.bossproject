@@ -678,7 +678,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>Timestap</columnname>
+				<columnname>Timestamp</columnname>
 				<columntype>timestamp</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -1069,7 +1069,7 @@
 				<columnunique>true</columnunique>
 			</column>
 			<column>
-				<columnname>Timestap</columnname>
+				<columnname>Timestamp</columnname>
 				<columntype>timestamp</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
@@ -1189,7 +1189,7 @@
 				<columnunique>false</columnunique>
 			</column>
 			<column>
-				<columnname>Timestap</columnname>
+				<columnname>Timestamp</columnname>
 				<columntype>timestamp</columntype>
 				<columncheck></columncheck>
 				<columnreftablename></columnreftablename>
